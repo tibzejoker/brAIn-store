@@ -1,0 +1,51 @@
+{
+  "$schema": "./registry.schema.json",
+  "version": 1,
+  "updated_at": "2026-04-29",
+  "repos": {
+    "brAIn-perception": {
+      "url": "https://github.com/tibzejoker/brAIn-perception",
+      "clone": "https://github.com/tibzejoker/brAIn-perception.git",
+      "default_branch": "main",
+      "description": "Voice, gaze and intent perception nodes."
+    }
+  },
+  "nodes": [
+    {
+      "name": "voice",
+      "package_name": "@brain/node-voice",
+      "repo": "brAIn-perception",
+      "subpath": "nodes/voice",
+      "version": "0.1.0",
+      "tags": ["service", "voice", "transcription", "diarization"],
+      "description": "Local STT (faster-whisper) + speaker diarization (WeSpeaker). Spawns its own Python server as a child process.",
+      "has_ui": true,
+      "needs_python": true,
+      "needs_ollama": false
+    },
+    {
+      "name": "gaze",
+      "package_name": "@brain/node-gaze",
+      "repo": "brAIn-perception",
+      "subpath": "nodes/gaze",
+      "version": "0.1.0",
+      "tags": ["service", "gaze", "vision", "face"],
+      "description": "Face detection (InsightFace) + gaze direction (Gazelle) + scene description (Moondream). Spawns its own Python server as a child process.",
+      "has_ui": true,
+      "needs_python": true,
+      "needs_ollama": false
+    },
+    {
+      "name": "intent",
+      "package_name": "@brain/node-intent",
+      "repo": "brAIn-perception",
+      "subpath": "nodes/intent",
+      "version": "0.1.0",
+      "tags": ["service", "intent", "correlator", "perception"],
+      "description": "Pure-TS correlator over voice.transcript + gaze.target.resolved bus events. Maintains persons (voice ↔ gaze ↔ name) in local SQLite, publishes intent.detected.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": false
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "brAIn store registry",
+  "description": "Schema for registry.json. Lists nodes installable into a brAIn checkout via the Store dashboard tab.",
+  "type": "object",
+  "required": ["version", "repos", "nodes"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "const": 1 },
+    "updated_at": { "type": "string" },
+    "repos": {
+      "type": "object",
+      "description": "Source repositories that host the nodes. Keyed by short name; nodes reference these via the `repo` field.",
+      "patternProperties": {
+        "^[A-Za-z0-9_.-]+$": {
+          "type": "object",
+          "required": ["url", "clone"],
+          "additionalProperties": false,
+          "properties": {
+            "url": { "type": "string", "format": "uri" },
+            "clone": { "type": "string", "description": "git clone URL (https or ssh)" },
+            "default_branch": { "type": "string", "default": "main" },
+            "description": { "type": "string" }
+          }
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "package_name", "repo", "subpath", "version", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
+          "package_name": { "type": "string", "pattern": "^@[a-z0-9-]+/node-[a-z0-9-]+$" },
+          "repo": { "type": "string" },
+          "subpath": { "type": "string" },
+          "version": { "type": "string" },
+          "ref": { "type": "string", "description": "git tag/branch/sha (default: repo.default_branch)" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "description": { "type": "string" },
+          "has_ui": { "type": "boolean", "default": false },
+          "needs_python": { "type": "boolean", "default": false },
+          "needs_ollama": { "type": "boolean", "default": false }
+        }
+      }
+    }
+  }
+}
