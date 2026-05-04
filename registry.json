@@ -647,15 +647,15 @@
   "seeds": [
     {
       "name": "default",
-      "description": "Canonical starter brAIn — brain + chat + memory (KV + vector + proxy + consolidator) + analyst + dev-agent + terminal + http-bridge + reminder. Auto-applied on first boot.",
+      "description": "Canonical starter brAIn — chat + brain + memory (KV + vector + proxy + consolidator) + analyst + dev-agent + terminal + http-bridge + reminder. The full demo, auto-applied on first boot.",
       "repo": "brAIn",
       "subpath": "seeds/default.yaml",
-      "ref": "0ba7fc6f4489e6955cafb451ef3543bc92c2f88b",
+      "ref": "024d1127cac2af76b91c292fda758c941f797b40",
       "checksum": "70e66a84dbe48a4620228b15ec7d726d886ff97effcdf3fe7609528a965f9e92",
       "tags": [
         "starter",
-        "demo",
-        "complete"
+        "complete",
+        "demo"
       ],
       "needs": [
         "brain",
@@ -672,38 +672,37 @@
       ]
     },
     {
-      "name": "vocal-chat",
-      "description": "Talk to brAIn over the mic — voice (STT) + brain + chat. Needs Ollama and a voice/gaze sidecar.",
+      "name": "chat",
+      "description": "Minimal talk-to-the-brain — just brain + chat. Lightweight version of `default` if you don’t need memory/tools yet.",
       "repo": "brAIn",
-      "subpath": "seeds/vocal-chat.yaml",
-      "ref": "0ba7fc6f4489e6955cafb451ef3543bc92c2f88b",
-      "checksum": "fdb39fa87a869e8dc34f97843c3332bd841c30ec7ef3c92592c5cabcc5ae9a77",
+      "subpath": "seeds/chat.yaml",
+      "ref": "024d1127cac2af76b91c292fda758c941f797b40",
+      "checksum": "0f2ed58048996d0e83be77c4e39c05438f85cf3604c33fefaf4469024b898676",
       "tags": [
-        "voice",
-        "chat",
-        "demo"
+        "starter",
+        "minimal",
+        "chat"
       ],
       "needs": [
-        "voice",
-        "gaze",
-        "intent",
         "brain",
         "chat"
       ]
     },
     {
-      "name": "intent",
-      "description": "Full perception stack: voice + gaze + intent fusion. Standalone — no brain, just the perception correlator.",
+      "name": "vocal-chat",
+      "description": "Voice round trip — speak into the mic, the perception stack (voice + gaze + intent) feeds the brain, the brain answers in the chat UI. Needs Ollama and the Python sidecar.",
       "repo": "brAIn",
-      "subpath": "seeds/intent.yaml",
-      "ref": "0ba7fc6f4489e6955cafb451ef3543bc92c2f88b",
-      "checksum": "6792bddb16d1f0c7bff5311b40eb94ea575d754911a8a0b7f909322520e38cce",
+      "subpath": "seeds/vocal-chat.yaml",
+      "ref": "024d1127cac2af76b91c292fda758c941f797b40",
+      "checksum": "b10b57acf1e684481413edfd8e6c390e9545b6acbe17084656110d1c25678e29",
       "tags": [
-        "perception",
         "voice",
-        "gaze"
+        "perception",
+        "demo"
       ],
       "needs": [
+        "brain",
+        "chat",
         "voice",
         "gaze",
         "intent"
@@ -711,14 +710,15 @@
     },
     {
       "name": "demo-needs",
-      "description": "Smallest possible seed — one echo node, demonstrates the needs[] auto-install flow.",
+      "description": "Smallest possible seed — one echo node. Teaches the needs[] format and how the framework auto-installs missing types from the marketplace.",
       "repo": "brAIn",
       "subpath": "seeds/demo-needs.yaml",
-      "ref": "0ba7fc6f4489e6955cafb451ef3543bc92c2f88b",
+      "ref": "024d1127cac2af76b91c292fda758c941f797b40",
       "checksum": "6493abf1644789f4ccd7f0a395104950243473461868eb3a3259d1ae7f5a5276",
       "tags": [
         "demo",
-        "minimal"
+        "minimal",
+        "tutorial"
       ],
       "needs": [
         "echo"
@@ -726,14 +726,15 @@
     },
     {
       "name": "demo-memory",
-      "description": "Framework boots empty, this seed pulls + spawns the memory KV node. Validates the full marketplace install path.",
+      "description": "Spawn a single memory KV node. Useful as a backend if you want a persistent KV store on the bus without the rest of the consciousness stack.",
       "repo": "brAIn",
       "subpath": "seeds/demo-memory.yaml",
-      "ref": "0ba7fc6f4489e6955cafb451ef3543bc92c2f88b",
+      "ref": "024d1127cac2af76b91c292fda758c941f797b40",
       "checksum": "2cbecd6e2f4229ce9de3d5f58913f0000530ff1db3f8775365dd177e590a8b9a",
       "tags": [
+        "memory",
         "demo",
-        "memory"
+        "minimal"
       ],
       "needs": [
         "memory"
