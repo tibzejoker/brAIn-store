@@ -63,11 +63,11 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "58b8b89cbd9eaad0635dd36766ab32e00c7c1277",
+      "ref": "d2679ecf6540621a880403789489eaaec655be26",
       "checksums": {
         ".gitignore": "5a0f5b76828c9cb4aad3c8be8d2d5d6276d0a2e549b1d9e67c7278700b65f061",
         "README.md": "5c50c8b489fcf589112e5a9089374da88b34fb9faf9aaedf05bbce3f3b2f96e6",
-        "config.json": "319652ea67d8fb0f62938660d726a6ccf2bf90cf947442fca0370043b4eb4350",
+        "config.json": "323048a12d9017d92fed1e825e1852cde4ef55971f63ccfe2f5829ad0d6b59fc",
         "package.json": "99aa4d9080cbf415577997471c594197eb5a08e927ae24c792f4c4bc6e63a7ab",
         "server/.gitignore": "40fe64a2b888f99cf74e3d8b590b48487fea718102b3edb05588637badda8299",
         "server/Dockerfile": "373fb07dbf81cd5f2f641d004bf410e1f8db1d7e856614f832e92baa713e5431",
@@ -114,11 +114,11 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "58b8b89cbd9eaad0635dd36766ab32e00c7c1277",
+      "ref": "d2679ecf6540621a880403789489eaaec655be26",
       "checksums": {
         ".gitignore": "effecf2ddabc0fb37924f21e486add8e703b4cbedc2550ace17daa5850d45398",
         "README.md": "3585effeb91f0ac7860c52f8ab27c827f16c95f2088a82b223f6a51885cf414b",
-        "config.json": "478d7aa1adfd34db3754ad3bd481a1cadb152c5872d0c3b5daff8906ce8fd477",
+        "config.json": "abf300fa8e199fb9a61a1ed3ec60a066b4db56c843ae353b9eb35d1a79a41b1d",
         "package.json": "fd8e114286e89beb9cecfa0db3e67584d4782de941f6d2c1d777cf54cbd67e75",
         "server/README.md": "6d55ac0f9357c875aa9d28307b5e5bd3c8a0cec51e89320e462bffcd6a71ce99",
         "server/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -167,11 +167,11 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "58b8b89cbd9eaad0635dd36766ab32e00c7c1277",
+      "ref": "d2679ecf6540621a880403789489eaaec655be26",
       "checksums": {
         ".gitignore": "dcaa9c6d97ad85714fd7ce29b8a75ee8d898f6b01e29522ace5ddd0e051ada30",
         "README.md": "70c2a4d80e7f8360e3d1edca65dbccba43ead879a8610411bcbeb186cbb247e5",
-        "config.json": "6917ac98301374cd55913af003e940346aece84be5bcf5c1f7e6b37adc5428ec",
+        "config.json": "e38fbeebed67de0308b831a6cfefa4f2251d26e8286f5a1500fa4263496ef8c2",
         "package.json": "7b3dbb2be0eeb1940ea197b479cd045b7cedd9e17b2c518b881a03f3ea94b971",
         "src/correlator.ts": "ff631fbb8071ae72cf7f381ed8647c22642d82b34f90432f5e63ae1be212fcee",
         "src/handler.ts": "e5a1bfc3a182d5fb94c158537bbddb1eac55fa5ff935c3ec284ea4a0052f6d13",
@@ -669,6 +669,52 @@
         "memory-vector",
         "memory-proxy",
         "memory-consolidator"
+      ],
+      "nodes": [
+        {
+          "name": "human",
+          "type": "chat"
+        },
+        {
+          "name": "consciousness",
+          "type": "brain"
+        },
+        {
+          "name": "analyst",
+          "type": "llm-basic"
+        },
+        {
+          "name": "dev-agent",
+          "type": "developer"
+        },
+        {
+          "name": "shell",
+          "type": "terminal"
+        },
+        {
+          "name": "web-fetch",
+          "type": "http-bridge"
+        },
+        {
+          "name": "reminder",
+          "type": "reminder"
+        },
+        {
+          "name": "memory-proxy",
+          "type": "memory-proxy"
+        },
+        {
+          "name": "memory-janitor",
+          "type": "memory-consolidator"
+        },
+        {
+          "name": "memory",
+          "type": "memory"
+        },
+        {
+          "name": "long-term-memory",
+          "type": "memory-vector"
+        }
       ]
     },
     {
@@ -686,6 +732,16 @@
       "needs": [
         "brain",
         "chat"
+      ],
+      "nodes": [
+        {
+          "name": "human",
+          "type": "chat"
+        },
+        {
+          "name": "consciousness",
+          "type": "brain"
+        }
       ]
     },
     {
@@ -706,6 +762,28 @@
         "voice",
         "gaze",
         "intent"
+      ],
+      "nodes": [
+        {
+          "name": "voice",
+          "type": "voice"
+        },
+        {
+          "name": "gaze",
+          "type": "gaze"
+        },
+        {
+          "name": "intent",
+          "type": "intent"
+        },
+        {
+          "name": "consciousness",
+          "type": "brain"
+        },
+        {
+          "name": "human",
+          "type": "chat"
+        }
       ]
     },
     {
@@ -727,6 +805,32 @@
         "memory-consolidator",
         "chat",
         "cron"
+      ],
+      "nodes": [
+        {
+          "name": "human",
+          "type": "chat"
+        },
+        {
+          "name": "memory-proxy",
+          "type": "memory-proxy"
+        },
+        {
+          "name": "kv-store",
+          "type": "memory"
+        },
+        {
+          "name": "vector-store",
+          "type": "memory-vector"
+        },
+        {
+          "name": "janitor",
+          "type": "memory-consolidator"
+        },
+        {
+          "name": "cleanup-cron",
+          "type": "cron"
+        }
       ]
     },
     {
@@ -745,6 +849,16 @@
       "needs": [
         "echo",
         "chat"
+      ],
+      "nodes": [
+        {
+          "name": "human",
+          "type": "chat"
+        },
+        {
+          "name": "ping-pong",
+          "type": "echo"
+        }
       ]
     }
   ]
