@@ -38,6 +38,12 @@
       "clone": "https://github.com/tibzejoker/brAIn-essentials.git",
       "default_branch": "main",
       "description": "Essentials: brain (consciousness), developer (meta), mcp-config + mcp-server (MCP federation), clock + cron + echo + attention."
+    },
+    "brAIn": {
+      "url": "https://github.com/tibzejoker/brAIn",
+      "clone": "https://github.com/tibzejoker/brAIn.git",
+      "default_branch": "main",
+      "description": "The brAIn framework itself — sdk, core, api, dashboard. No nodes; everything is in sister repos."
     }
   },
   "nodes": [
@@ -636,6 +642,102 @@
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "91bc781be159eeedc09dab16ce1cdb068e56f9da9797337ed010033a959c3b1c"
       }
+    }
+  ],
+  "seeds": [
+    {
+      "name": "default",
+      "description": "Canonical starter brAIn — brain + chat + memory (KV + vector + proxy + consolidator) + analyst + dev-agent + terminal + http-bridge + reminder. Auto-applied on first boot.",
+      "repo": "brAIn",
+      "subpath": "seeds/default.yaml",
+      "ref": "0ba7fc6f4489e6955cafb451ef3543bc92c2f88b",
+      "checksum": "70e66a84dbe48a4620228b15ec7d726d886ff97effcdf3fe7609528a965f9e92",
+      "tags": [
+        "starter",
+        "demo",
+        "complete"
+      ],
+      "needs": [
+        "brain",
+        "developer",
+        "chat",
+        "llm-basic",
+        "terminal",
+        "http-bridge",
+        "reminder",
+        "memory",
+        "memory-vector",
+        "memory-proxy",
+        "memory-consolidator"
+      ]
+    },
+    {
+      "name": "vocal-chat",
+      "description": "Talk to brAIn over the mic — voice (STT) + brain + chat. Needs Ollama and a voice/gaze sidecar.",
+      "repo": "brAIn",
+      "subpath": "seeds/vocal-chat.yaml",
+      "ref": "0ba7fc6f4489e6955cafb451ef3543bc92c2f88b",
+      "checksum": "fdb39fa87a869e8dc34f97843c3332bd841c30ec7ef3c92592c5cabcc5ae9a77",
+      "tags": [
+        "voice",
+        "chat",
+        "demo"
+      ],
+      "needs": [
+        "voice",
+        "gaze",
+        "intent",
+        "brain",
+        "chat"
+      ]
+    },
+    {
+      "name": "intent",
+      "description": "Full perception stack: voice + gaze + intent fusion. Standalone — no brain, just the perception correlator.",
+      "repo": "brAIn",
+      "subpath": "seeds/intent.yaml",
+      "ref": "0ba7fc6f4489e6955cafb451ef3543bc92c2f88b",
+      "checksum": "6792bddb16d1f0c7bff5311b40eb94ea575d754911a8a0b7f909322520e38cce",
+      "tags": [
+        "perception",
+        "voice",
+        "gaze"
+      ],
+      "needs": [
+        "voice",
+        "gaze",
+        "intent"
+      ]
+    },
+    {
+      "name": "demo-needs",
+      "description": "Smallest possible seed — one echo node, demonstrates the needs[] auto-install flow.",
+      "repo": "brAIn",
+      "subpath": "seeds/demo-needs.yaml",
+      "ref": "0ba7fc6f4489e6955cafb451ef3543bc92c2f88b",
+      "checksum": "6493abf1644789f4ccd7f0a395104950243473461868eb3a3259d1ae7f5a5276",
+      "tags": [
+        "demo",
+        "minimal"
+      ],
+      "needs": [
+        "echo"
+      ]
+    },
+    {
+      "name": "demo-memory",
+      "description": "Framework boots empty, this seed pulls + spawns the memory KV node. Validates the full marketplace install path.",
+      "repo": "brAIn",
+      "subpath": "seeds/demo-memory.yaml",
+      "ref": "0ba7fc6f4489e6955cafb451ef3543bc92c2f88b",
+      "checksum": "2cbecd6e2f4229ce9de3d5f58913f0000530ff1db3f8775365dd177e590a8b9a",
+      "tags": [
+        "demo",
+        "memory"
+      ],
+      "needs": [
+        "memory"
+      ]
     }
   ]
 }
