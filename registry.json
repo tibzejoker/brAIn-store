@@ -650,7 +650,7 @@
       "description": "Canonical starter brAIn — chat + brain + memory (KV + vector + proxy + consolidator) + analyst + dev-agent + terminal + http-bridge + reminder. The full demo, auto-applied on first boot.",
       "repo": "brAIn",
       "subpath": "seeds/default.yaml",
-      "ref": "024d1127cac2af76b91c292fda758c941f797b40",
+      "ref": "f3ca92bb5a334a7f1fd59fa9272722700cebff6d",
       "checksum": "70e66a84dbe48a4620228b15ec7d726d886ff97effcdf3fe7609528a965f9e92",
       "tags": [
         "starter",
@@ -673,10 +673,10 @@
     },
     {
       "name": "chat",
-      "description": "Minimal talk-to-the-brain — just brain + chat. Lightweight version of `default` if you don’t need memory/tools yet.",
+      "description": "Minimal talk-to-the-brain — just brain + chat. Lightweight version of default if you do not need memory/tools yet.",
       "repo": "brAIn",
       "subpath": "seeds/chat.yaml",
-      "ref": "024d1127cac2af76b91c292fda758c941f797b40",
+      "ref": "f3ca92bb5a334a7f1fd59fa9272722700cebff6d",
       "checksum": "0f2ed58048996d0e83be77c4e39c05438f85cf3604c33fefaf4469024b898676",
       "tags": [
         "starter",
@@ -690,10 +690,10 @@
     },
     {
       "name": "vocal-chat",
-      "description": "Voice round trip — speak into the mic, the perception stack (voice + gaze + intent) feeds the brain, the brain answers in the chat UI. Needs Ollama and the Python sidecar.",
+      "description": "Voice round trip — speak into the mic, voice + gaze + intent feed the brain, the brain answers in the chat UI. Needs Ollama + Python sidecar.",
       "repo": "brAIn",
       "subpath": "seeds/vocal-chat.yaml",
-      "ref": "024d1127cac2af76b91c292fda758c941f797b40",
+      "ref": "f3ca92bb5a334a7f1fd59fa9272722700cebff6d",
       "checksum": "b10b57acf1e684481413edfd8e6c390e9545b6acbe17084656110d1c25678e29",
       "tags": [
         "voice",
@@ -709,35 +709,42 @@
       ]
     },
     {
-      "name": "demo-needs",
-      "description": "Smallest possible seed — one echo node. Teaches the needs[] format and how the framework auto-installs missing types from the marketplace.",
-      "repo": "brAIn",
-      "subpath": "seeds/demo-needs.yaml",
-      "ref": "024d1127cac2af76b91c292fda758c941f797b40",
-      "checksum": "6493abf1644789f4ccd7f0a395104950243473461868eb3a3259d1ae7f5a5276",
-      "tags": [
-        "demo",
-        "minimal",
-        "tutorial"
-      ],
-      "needs": [
-        "echo"
-      ]
-    },
-    {
       "name": "demo-memory",
-      "description": "Spawn a single memory KV node. Useful as a backend if you want a persistent KV store on the bus without the rest of the consciousness stack.",
+      "description": "Full memory subsystem with chat to interact — memory KV + vector + proxy + cron-driven consolidator + chat. Type into the chat (mem.store / mem.ask) and watch the proxy fan out and synthesize responses.",
       "repo": "brAIn",
       "subpath": "seeds/demo-memory.yaml",
-      "ref": "024d1127cac2af76b91c292fda758c941f797b40",
-      "checksum": "2cbecd6e2f4229ce9de3d5f58913f0000530ff1db3f8775365dd177e590a8b9a",
+      "ref": "f3ca92bb5a334a7f1fd59fa9272722700cebff6d",
+      "checksum": "777ef2e5ee76ee1f069ed6856e05cc24c91bddb9329d92f8bf59823e199ef104",
       "tags": [
         "memory",
         "demo",
-        "minimal"
+        "interactive"
       ],
       "needs": [
-        "memory"
+        "memory",
+        "memory-vector",
+        "memory-proxy",
+        "memory-consolidator",
+        "chat",
+        "cron"
+      ]
+    },
+    {
+      "name": "demo-needs",
+      "description": "Smallest interactive seed — chat + echo. Pick demo.ping from the chat dropdown, type, see the echoed-back demo.pong. Teaches needs[] auto-install with a visible round trip.",
+      "repo": "brAIn",
+      "subpath": "seeds/demo-needs.yaml",
+      "ref": "f3ca92bb5a334a7f1fd59fa9272722700cebff6d",
+      "checksum": "11d1a30471e0a9c5ae9318a9846546669f589bf18e7114e77f42ebe5f728791d",
+      "tags": [
+        "demo",
+        "minimal",
+        "tutorial",
+        "interactive"
+      ],
+      "needs": [
+        "echo",
+        "chat"
       ]
     }
   ]
