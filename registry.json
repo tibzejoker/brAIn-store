@@ -32,6 +32,12 @@
       "clone": "https://github.com/tibzejoker/brAIn-ui.git",
       "default_branch": "main",
       "description": "UI nodes: chat (browser interface for human ↔ network)."
+    },
+    "brAIn-essentials": {
+      "url": "https://github.com/tibzejoker/brAIn-essentials",
+      "clone": "https://github.com/tibzejoker/brAIn-essentials.git",
+      "default_branch": "main",
+      "description": "Essentials: brain (consciousness), developer (meta), mcp-config + mcp-server (MCP federation), clock + cron + echo + attention."
     }
   },
   "nodes": [
@@ -431,6 +437,204 @@
         "src/handler.ts": "4b53cd6fdc8f62a8c6084e4d7dfee4bc2e982f3ff89c6c5398b9c14895676165",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "5e9bdcd4a8f899c90b9872d78773ba1f12ffa4ec6a4e181af281ef8f32f27b36"
+      }
+    },
+    {
+      "name": "brain",
+      "package_name": "@brain/node-brain",
+      "repo": "brAIn-essentials",
+      "subpath": "nodes/brain",
+      "version": "0.1.0",
+      "tags": [
+        "consciousness",
+        "orchestrator",
+        "llm",
+        "root"
+      ],
+      "description": "Central LLM-driven consciousness. Inspects, delegates, reflects, orchestrates.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": true,
+      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "checksums": {
+        "config.json": "473bc091ea0b9f7917c0006f8f5f5d86a4519b460dd8de161bfda9ec2dd4ec8e",
+        "package.json": "c2b73000bb40f51d93968335f8e755c5ed15f6af6d95576b103a550c33466e84",
+        "src/handler.ts": "8b00f78c07e48b35949c3c36c1bdbb7349eed4453024ef59ef80b84faad3633c",
+        "src/message-formatter.ts": "c3c740e1706f6457bef880ec9f0a26e7c242c6c75b158b805f60affe6874f43e",
+        "src/tool-parser.ts": "026ce35f0342b3a43288aff5a918a39c7f725e7981bbf499a056595bd2d1b657",
+        "src/tools.ts": "005e986601eb40d5300ab41c4deccbe94cfbcc3b030b6a9388283d0608c6efdd",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "23a43c22a738e1c8abba3b65206c11fb013044405ce56862bab6186e8fd09e15"
+      }
+    },
+    {
+      "name": "developer",
+      "package_name": "@brain/node-developer",
+      "repo": "brAIn-essentials",
+      "subpath": "nodes/developer",
+      "version": "0.1.0",
+      "tags": [
+        "meta",
+        "developer",
+        "code-generation"
+      ],
+      "description": "Authors new node packages at runtime under nodes/_dynamic/<slug>/.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "checksums": {
+        "config.json": "2320b704481c4a1c77d4c12d1d4125ff64695b27927aefdc6719f73229fc1aec",
+        "package.json": "4864fca1be5c5c3363c450ba66947b3c3d9368fc2baa5d9c2ddf72b5bb063696",
+        "src/handler.ts": "f2a8f3fc79f844ed84473788b44af8f623de441165c009f07ad347a8fcb1c448",
+        "src/template.ts": "6e3b73c483bda4403be92256e28d2ea41fc4e5e7a37820160864b7eda4198117",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "mcp-config",
+      "package_name": "@brain/node-mcp-config",
+      "repo": "brAIn-essentials",
+      "subpath": "nodes/mcp-config",
+      "version": "0.1.0",
+      "tags": [
+        "service",
+        "mcp",
+        "manager"
+      ],
+      "description": "Manager + federation hub for MCP servers. Spawns one mcp-server per entry in mcpServers JSON.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "checksums": {
+        "config.json": "9b4068eeb2d7980582e314f9a7c022e9c9b19bed17fc2877ce252705bdadc5f7",
+        "package.json": "d3e58500429aea611c16d0f431bc01df29011f87d126b49b4dd0f05b38f1f206",
+        "src/handler.ts": "9899fd28df9a21bc7f2df9d008003521ef285f0330fa347e6a30f5cb9bd597c8",
+        "src/runtime.ts": "69018daf5b3a5e75fbe61238549b51676c5cab010056a7e7d090574f55acfb65",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "be2807ed166b0df5599c8ea43c0ead953f6a68e9b04460fd94044b60f5293f3f"
+      }
+    },
+    {
+      "name": "mcp-server",
+      "package_name": "@brain/node-mcp-server",
+      "repo": "brAIn-essentials",
+      "subpath": "nodes/mcp-server",
+      "version": "0.1.0",
+      "tags": [
+        "service",
+        "mcp",
+        "tools"
+      ],
+      "description": "Bridges ONE MCP server. Each tool becomes a bus topic mcp.<alias>.<tool>.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "checksums": {
+        "config.json": "6a70244c6a914700cd991f29f6c664c54739dc6c0a9206d3bc054bb4b6dd3c24",
+        "package.json": "f21a8ca5e726a31ea5aabc99bcec3d14fe0585a84fc91aff1559cce1c48724fa",
+        "src/connect.ts": "a28d855622da989a681e2faeff113a5b2a4a0273472c53f01df4b0d6423c80ef",
+        "src/handler.ts": "56d6a3763ab94cc73432487a2dd996060dfab3663008d4c93dbfe3436245d46e",
+        "src/oauth.ts": "9042fb6b6969f2f8ec28e1074a3c8b3974be585fde2cfc8f39fc49cd10e284c1",
+        "src/parse.ts": "cfbbf48805c526b543b1435457bcc8aa66fc8a5ada798e6122d386ff095ab50d",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "clock",
+      "package_name": "@brain/node-clock",
+      "repo": "brAIn-essentials",
+      "subpath": "nodes/clock",
+      "version": "0.1.0",
+      "tags": [
+        "primitive",
+        "timer",
+        "heartbeat"
+      ],
+      "description": "Periodic tick. Heartbeat / timer primitive.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "checksums": {
+        "config.json": "713e71bbd418d4b9e7062b2ef5aef7ef33ddf34d77577c3453f21f4f53617089",
+        "package.json": "33d1f389a6b1ecb6f684b001a421a8f33cc0502213c0dca7f02079a074b3bac0",
+        "src/handler.ts": "c0b140bfa3c3b924e2738966282cc5b55a64854eb1413820a9f864e96f0ed90d",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "cron",
+      "package_name": "@brain/node-cron",
+      "repo": "brAIn-essentials",
+      "subpath": "nodes/cron",
+      "version": "0.1.0",
+      "tags": [
+        "primitive",
+        "scheduler",
+        "cron"
+      ],
+      "description": "Schedules messages on a cron expression.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "checksums": {
+        "config.json": "97a69609d09e0e34cd987dd3dd246fcb770c7b4207d6a2c02614ab8893ae65d7",
+        "package.json": "f422df4e0e5538977baa574b4dc9538c8bc55a38fea960e8daa9f32b45f7f58a",
+        "src/handler.ts": "553a6a00d04f3cff076e49c7e68a54cebb2ca38e023ba37727be4fd7896338da",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "echo",
+      "package_name": "@brain/node-echo",
+      "repo": "brAIn-essentials",
+      "subpath": "nodes/echo",
+      "version": "0.1.0",
+      "tags": [
+        "primitive",
+        "debug",
+        "example"
+      ],
+      "description": "Trivial echo node — debug + smallest possible handler example.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "checksums": {
+        "config.json": "5ba0429baa4a03d7a7e29b56bc444e491be9e8510cbd50b1ca593133e4c6f5c5",
+        "package.json": "2d8d79bb91a59751e4e77bca4116eea4f0aa9651a0a4b10d8a4cf2bf3e5a38cc",
+        "src/handler.ts": "3be8b9af0d4aa41e37032b976cf8439249ebdea2300657b378305ecb75f3dd57",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "attention",
+      "package_name": "@brain/node-attention",
+      "repo": "brAIn-essentials",
+      "subpath": "nodes/attention",
+      "version": "0.1.0",
+      "tags": [
+        "bridge",
+        "attention",
+        "supervisor"
+      ],
+      "description": "Bridges intent / voice / gaze perception services to brain.input.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "checksums": {
+        "config.json": "fba5d5bdc304342298bc2d14d0586ae508324d03c0c3199d5c22287afc260e01",
+        "package.json": "b58c70c5ad2ed84a766b346115e0b8dd946d704452a6f4ef2ab118e9a8c6d7a9",
+        "src/handler.ts": "7098ccdb9ea9c505b0b5ec9568a0e92b4fafc5482896bd342a77dc6d963c5406",
+        "src/intent-client.ts": "9def6db5a714b183e4878234d46ef08702d21023ad15471b727064abf87d9d1c",
+        "src/services.ts": "7b955d09034b79fd4354672b1d7f81dbc9dd1645610a3d716bb234b9ab028429",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "91bc781be159eeedc09dab16ce1cdb068e56f9da9797337ed010033a959c3b1c"
       }
     }
   ]
