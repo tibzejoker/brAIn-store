@@ -14,6 +14,24 @@
       "clone": "https://github.com/tibzejoker/brAIn-memory.git",
       "default_branch": "main",
       "description": "Memory-domain nodes: KV store, vector store, intelligent gateway, autonomous consolidator, scheduled reminders."
+    },
+    "brAIn-tools": {
+      "url": "https://github.com/tibzejoker/brAIn-tools",
+      "clone": "https://github.com/tibzejoker/brAIn-tools.git",
+      "default_branch": "main",
+      "description": "Tool nodes: terminal, calc-py, http-bridge."
+    },
+    "brAIn-llm": {
+      "url": "https://github.com/tibzejoker/brAIn-llm",
+      "clone": "https://github.com/tibzejoker/brAIn-llm.git",
+      "default_branch": "main",
+      "description": "LLM-provider nodes: llm-basic (generic LLM caller), llm-cli (Claude/Codex/Gemini wrappers)."
+    },
+    "brAIn-ui": {
+      "url": "https://github.com/tibzejoker/brAIn-ui",
+      "clone": "https://github.com/tibzejoker/brAIn-ui.git",
+      "default_branch": "main",
+      "description": "UI nodes: chat (browser interface for human ↔ network)."
     }
   },
   "nodes": [
@@ -23,11 +41,50 @@
       "repo": "brAIn-perception",
       "subpath": "nodes/voice",
       "version": "0.1.0",
-      "tags": ["service", "voice", "transcription", "diarization"],
-      "description": "Local STT (faster-whisper) + speaker diarization (WeSpeaker). Spawns its own Python server as a child process.",
+      "tags": [
+        "service",
+        "voice",
+        "transcription",
+        "diarization"
+      ],
+      "description": "Local STT (faster-whisper) + speaker diarization (WeSpeaker). Spawns its own Python server.",
       "has_ui": true,
       "needs_python": true,
-      "needs_ollama": false
+      "needs_ollama": false,
+      "ref": "58b8b89cbd9eaad0635dd36766ab32e00c7c1277",
+      "checksums": {
+        ".gitignore": "5a0f5b76828c9cb4aad3c8be8d2d5d6276d0a2e549b1d9e67c7278700b65f061",
+        "README.md": "5c50c8b489fcf589112e5a9089374da88b34fb9faf9aaedf05bbce3f3b2f96e6",
+        "config.json": "319652ea67d8fb0f62938660d726a6ccf2bf90cf947442fca0370043b4eb4350",
+        "package.json": "99aa4d9080cbf415577997471c594197eb5a08e927ae24c792f4c4bc6e63a7ab",
+        "server/.gitignore": "40fe64a2b888f99cf74e3d8b590b48487fea718102b3edb05588637badda8299",
+        "server/Dockerfile": "373fb07dbf81cd5f2f641d004bf410e1f8db1d7e856614f832e92baa713e5431",
+        "server/README.md": "3e75a6e999ef6009bf8153ab4b4fdd85d2793850fe18efffeea20676621208fe",
+        "server/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "server/app/api.py": "b308972cc81874341fd43c2bae66ec59410355d7363ce69dde48936a33d13057",
+        "server/app/config.py": "ef2d00b6b576d400fb0397bd602dac03edecadf01fe8f1ed7e85c713c09e2721",
+        "server/app/embedder.py": "4113be0951f56b6b7b9ed85de00f222faca6fde199306eff31f56d8c10190878",
+        "server/app/engine.py": "3cfd98a8c1ded3e9900976778318d5d5ae3557444767c588dfc163f2bcd15dc4",
+        "server/app/heartbeat.py": "6d3f9e3c3d5fbe4f4c79531d957d2d1a78fc171547eb2dc3aef7a694574fb7fb",
+        "server/app/identity.py": "a9178d9303cb404ceba5a1c84a906696ac930d38fabdef4a33f9c35e9d74d9df",
+        "server/app/local_capture.py": "a35e4895bdee0d63b0cb2cca254af8ff2138837e7de4cc55056a90ca9279c19e",
+        "server/app/main.py": "7d1d414e81bf86c6728e1538bdd791def67c40a0eb4a0aac93377fcc1ae992ba",
+        "server/app/models.py": "d06786009e8fcd15cad17adc9b0c1ef92deda1bf5a3a037407b9b6868f416ed3",
+        "server/app/profiles.py": "8fb5f923de2a47cd5541ad0ea57a6f56b0fe4a83589c11505393bc0653ef9bb5",
+        "server/app/setup_models.py": "a6e900c8a6b437e1e8f7edc7b4a095cd0e7f9e7259c7908844e530194222a9a9",
+        "server/app/stt.py": "41f9f28a022df9e47859329f07612087785900e86edc734957e1bb85fec035c2",
+        "server/app/vad.py": "8c777ac6c262cdcb36ba91085e474a836f3666d116dcff0a6f3afcc49b7955b7",
+        "server/app/ws.py": "bc811c61dd4a90f5c819175bbeca5e8a875b9b295e1038ca3337ae5774bcf97a",
+        "server/docker-compose.yml": "d7afc472ee5b929584276fa65cf25c52b39ed4025b8982b8a8e2461773c11fea",
+        "server/pyproject.toml": "f674659d5a418bceceba46babae1fe8584fac67ebf175c54a63fc6808b1368b9",
+        "server/requirements.txt": "5cdf2cebb3085e731f98e63fbe4224ad4a82f6a6b1143e22e499eff00401e9ea",
+        "server/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "server/tests/test_heartbeat.py": "2c07a05a74cb5fa3e355c1c62a0b4337050daddbb38d39488fa69f6f92bca7ea",
+        "server/tests/test_local_capture.py": "c68c7a252fb96193c83fcdee99fc9018e2467c9a9a436d5fc1f079e21dc51354",
+        "src/handler.ts": "4e40790db29dafa1372b0464e1c3fd3fbf223ccb4cfc9d9e964a7fa193166287",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "c4633a84735d8f67f0aa9f4ddeb8b3ec9cd8803cf77654982ef2af60a7c03d27"
+      }
     },
     {
       "name": "gaze",
@@ -35,11 +92,52 @@
       "repo": "brAIn-perception",
       "subpath": "nodes/gaze",
       "version": "0.1.0",
-      "tags": ["service", "gaze", "vision", "face"],
-      "description": "Face detection (InsightFace) + gaze direction (Gazelle) + scene description (Moondream). Spawns its own Python server as a child process.",
+      "tags": [
+        "service",
+        "gaze",
+        "vision",
+        "face"
+      ],
+      "description": "Face detection (InsightFace) + gaze direction (Gazelle) + scene description (Moondream). Python sidecar.",
       "has_ui": true,
       "needs_python": true,
-      "needs_ollama": false
+      "needs_ollama": false,
+      "ref": "58b8b89cbd9eaad0635dd36766ab32e00c7c1277",
+      "checksums": {
+        ".gitignore": "effecf2ddabc0fb37924f21e486add8e703b4cbedc2550ace17daa5850d45398",
+        "README.md": "3585effeb91f0ac7860c52f8ab27c827f16c95f2088a82b223f6a51885cf414b",
+        "config.json": "478d7aa1adfd34db3754ad3bd481a1cadb152c5872d0c3b5daff8906ce8fd477",
+        "package.json": "fd8e114286e89beb9cecfa0db3e67584d4782de941f6d2c1d777cf54cbd67e75",
+        "server/README.md": "6d55ac0f9357c875aa9d28307b5e5bd3c8a0cec51e89320e462bffcd6a71ce99",
+        "server/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "server/app/api.py": "9b266fc5dab18f295dd75d275f3013d01dec4d20713b0989da2af187f8402de0",
+        "server/app/config.py": "9f3597691a361388648b5effc7537e79df33d8cab716393c311c7881cec4af3f",
+        "server/app/engine.py": "0ac0067057129b8b70f666def96a13866683c43d06221330388df2678e2d53c2",
+        "server/app/gaze.py": "2f018deeb6568c0e3cdce75d159fcf783088896c554bf6b823e7a196a1668f8e",
+        "server/app/gazelle.py": "57da85e75836ed5c5edd43e5b91f50c87620c29dcf1f2e534055ba1639ea0fd6",
+        "server/app/heartbeat.py": "6d3f9e3c3d5fbe4f4c79531d957d2d1a78fc171547eb2dc3aef7a694574fb7fb",
+        "server/app/iris.py": "5311c5e8f84251775005bab2aebdd4b9e984e0308bc672abee1f1ece2bd180a5",
+        "server/app/local_capture.py": "2a65517200a8f489884b478121159366a09abd89778c68826a380dc6e2540b7b",
+        "server/app/main.py": "890147091dbe6fb275ce3333763fd4c087c3ca83d4f721635d01133f28eb8dc5",
+        "server/app/models.py": "a4dfcd25815adcb6042755b612a9c75c31753173c3177df9a0258efe4b7c6a18",
+        "server/app/profiles.py": "d9ed493a306ef8c1b24b6e4f3310526c02cd740922b8a5f2a68a6b10fcd890ed",
+        "server/app/recognizer.py": "1f311bedf7543c500f3860b824660a83a7b013269fa29df32bacc0d16cfbb5c2",
+        "server/app/setup_models.py": "ec25cad9a9b178e90b7d9219bd1d744ccde91f980aeb5a3434b0456e73462f68",
+        "server/pyproject.toml": "4b7c782b09a83fc94f969090fcc46cac2e5b4b4070f1b410b7f49dcb468fc6fb",
+        "server/requirements.txt": "74ae2d1f001f3cd257a3c9bc49f3c0a5a1ff53a3665a411342b0d61a1ef40b76",
+        "server/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "server/tests/test_heartbeat.py": "2c07a05a74cb5fa3e355c1c62a0b4337050daddbb38d39488fa69f6f92bca7ea",
+        "server/tests/test_local_capture.py": "adfe6b96e3757ea5aa49862cbd5e6f22d91622570e4853f689ec533040e8ffa0",
+        "src/handler.ts": "0d9922e4652277d94b52e6d0ea1989aa0ec2d88a7f9630ab6f0d133479043450",
+        "tests/experiments/asym_probe.py": "2a0b94c390432669d79335c3c32e333430bf89779539dd8a1ec09cac001b26e9",
+        "tests/experiments/gaze_probe.py": "d2740e401a860f2e1349075321db25130cf74dd509320b766af4525d5908df2e",
+        "tests/experiments/iris_probe.py": "29e1b1f911c47521336ff61202f0419d19a82bd63fc7731db8fc0896f01cf572",
+        "tests/experiments/iris_probe_v2.py": "5ef175b457ff95b252b296512fe0f2ea7a0d2a8baceb55f5ea3d366fe69c03d3",
+        "tests/fixtures.json": "da2d593f19b1c7f6978b3cfa2903337051827ad0101c6b68fa53ac19361570dc",
+        "tests/run_tests.py": "370fdfe5bb40800f9c2b4d3eca0575791ae9f2604f205e723c8fa0625426cab3",
+        "tsconfig.json": "4ff3c3ff7b881a8901ce304478be85ee8d38d5b680d50cd740d3b794da7d8383",
+        "ui/index.html": "646d46dd6780480ce5e319599a42ccbf10e4676616f50c6092c1a2dd89421d13"
+      }
     },
     {
       "name": "intent",
@@ -47,11 +145,30 @@
       "repo": "brAIn-perception",
       "subpath": "nodes/intent",
       "version": "0.1.0",
-      "tags": ["service", "intent", "correlator", "perception"],
-      "description": "Pure-TS correlator over voice.transcript + gaze.target.resolved bus events. Maintains persons (voice ↔ gaze ↔ name) in local SQLite, publishes intent.detected.",
+      "tags": [
+        "service",
+        "intent",
+        "correlator",
+        "perception"
+      ],
+      "description": "Pure-TS correlator over voice + gaze events. Maintains persons in local SQLite, publishes intent.detected.",
       "has_ui": true,
       "needs_python": false,
-      "needs_ollama": false
+      "needs_ollama": false,
+      "ref": "58b8b89cbd9eaad0635dd36766ab32e00c7c1277",
+      "checksums": {
+        ".gitignore": "dcaa9c6d97ad85714fd7ce29b8a75ee8d898f6b01e29522ace5ddd0e051ada30",
+        "README.md": "70c2a4d80e7f8360e3d1edca65dbccba43ead879a8610411bcbeb186cbb247e5",
+        "config.json": "6917ac98301374cd55913af003e940346aece84be5bcf5c1f7e6b37adc5428ec",
+        "package.json": "7b3dbb2be0eeb1940ea197b479cd045b7cedd9e17b2c518b881a03f3ea94b971",
+        "src/correlator.ts": "ff631fbb8071ae72cf7f381ed8647c22642d82b34f90432f5e63ae1be212fcee",
+        "src/handler.ts": "e5a1bfc3a182d5fb94c158537bbddb1eac55fa5ff935c3ec284ea4a0052f6d13",
+        "src/server.ts": "570e1ddd32cb2db099bd2f0d48a14308993ecdf9947d48ad09adfea8de3a491b",
+        "src/store.ts": "7c4cbcdf9fdce7236fd85b09edaacf1dbaeed4f17535152e8c17355418cfa075",
+        "src/timeline.ts": "71969c777fe02b3104ab909c8d64355bd9c3162e2b24b7d446a106383df88cd7",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "838403ee7c191c49f594f7664507c8ff614d041566b1bb5e3ecf6a327959b9ae"
+      }
     },
     {
       "name": "memory",
@@ -59,12 +176,16 @@
       "repo": "brAIn-memory",
       "subpath": "nodes/memory",
       "version": "0.1.0",
-      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
-      "tags": ["memory", "storage", "knowledge"],
-      "description": "Persistent key-value memory store with tags + free-text search. Per-instance JSON file in ctx.dataDir.",
+      "tags": [
+        "memory",
+        "storage",
+        "knowledge"
+      ],
+      "description": "Persistent KV memory store with tags + free-text search. Per-instance JSON file in ctx.dataDir.",
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
+      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
       "checksums": {
         "config.json": "94073a2245c8f3592503599b88db1d0acf863f177591f1a768831f696b743767",
         "package.json": "f4aa8503f3157b805e9de7d4d2bf42417347db1559bfd2f6111e80ca2f5bc9f7",
@@ -78,12 +199,18 @@
       "repo": "brAIn-memory",
       "subpath": "nodes/memory-vector",
       "version": "0.1.0",
-      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
-      "tags": ["memory", "vector", "rag", "embeddings", "long-term"],
-      "description": "Vector memory store using LanceDB + Ollama embeddings (qwen3-embedding:0.6b, 1024d). Semantic search, indexing, RAG.",
+      "tags": [
+        "memory",
+        "vector",
+        "rag",
+        "embeddings",
+        "long-term"
+      ],
+      "description": "Vector memory using LanceDB + Ollama embeddings (qwen3-embedding:0.6b). Semantic search, RAG.",
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
+      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
       "checksums": {
         "config.json": "4bd36829f80c9f7de0fa3fd4e16d931255dc30ab4fc2b634b015f036ba88bed7",
         "package.json": "1a3bde2b5971576c1e04a4350e3be8077873974118387df704c410bb6f19f821",
@@ -97,12 +224,16 @@
       "repo": "brAIn-memory",
       "subpath": "nodes/memory-proxy",
       "version": "0.1.0",
-      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
-      "tags": ["memory", "proxy", "intelligence"],
-      "description": "Intelligent gateway. Receives mem.ask / mem.store, fans out to KV + vector backends, synthesizes a final answer via LLM.",
+      "tags": [
+        "memory",
+        "proxy",
+        "intelligence"
+      ],
+      "description": "Intelligent gateway over KV + vector backends, synthesizes a final answer via LLM.",
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
+      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
       "checksums": {
         "config.json": "4d81660a66d8468343996fea5927e06684b74728b69f51b7f5b524a0730c319f",
         "package.json": "a40784f1d658e8dd3b74c09271d19c58eaafb4779634bdb5e9c5b4936c765826",
@@ -116,12 +247,17 @@
       "repo": "brAIn-memory",
       "subpath": "nodes/memory-consolidator",
       "version": "0.1.0",
-      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
-      "tags": ["memory", "llm", "maintenance", "autonomous"],
+      "tags": [
+        "memory",
+        "llm",
+        "maintenance",
+        "autonomous"
+      ],
       "description": "Autonomous memory maintenance — periodically merges duplicates and drops stale entries.",
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
+      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
       "checksums": {
         "config.json": "0cf79f6afafd2b0cd18dd89eedd178cf89c04b7cc0f1455a8254677d6298a438",
         "package.json": "9bf8052b08a7abf9b724a4c2c58b9bbb5d192f58e0cbf6998a4b966ead06071b",
@@ -135,17 +271,166 @@
       "repo": "brAIn-memory",
       "subpath": "nodes/reminder",
       "version": "0.1.0",
-      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
-      "tags": ["utility", "scheduler", "reminder"],
+      "tags": [
+        "utility",
+        "scheduler",
+        "reminder"
+      ],
       "description": "Schedules timed reminders. Survives restarts via ctx.dataDir-backed state.",
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
+      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
       "checksums": {
         "config.json": "8afec81273444c5fa4c188b8cda59f525a999cbe6843066eca24bccb076c4354",
         "package.json": "74ecf6b4c06c9a17d5d5dce73b4f9dfbed75f44066af6ee0f556045c80b6bea8",
         "src/handler.ts": "2cedea09641caa1f1b570f03b96c82a132ba8454f0b3ec9b96831c7ad7bb80d2",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "terminal",
+      "package_name": "@brain/node-terminal",
+      "repo": "brAIn-tools",
+      "subpath": "nodes/terminal",
+      "version": "0.1.0",
+      "tags": [
+        "service",
+        "tool",
+        "shell"
+      ],
+      "description": "Shell command execution. Streams stdout/stderr back on the bus.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "c17be9c65a5d6c2c855ee9140ee45a34d255edae",
+      "checksums": {
+        "config.json": "da24106ff3f5e46a1b9b4eeb9f2f4edd7b490f061cd286f76ada09b6620dfdcf",
+        "package.json": "f580d18eed419478b4f178992ab8ba979e3b0eb056c98ae36704f2c36a702a2d",
+        "src/handler.ts": "d0330f694772248d24829097b6c82021eddb115eba07537ec89c2ced69af3f9f",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "calc-py",
+      "package_name": "@brain/node-calc-py",
+      "repo": "brAIn-tools",
+      "subpath": "nodes/calc-py",
+      "version": "0.1.0",
+      "tags": [
+        "service",
+        "tool",
+        "python",
+        "web"
+      ],
+      "description": "Python expression evaluator. Web transport, runs in a sidecar.",
+      "has_ui": false,
+      "needs_python": true,
+      "needs_ollama": false,
+      "ref": "c17be9c65a5d6c2c855ee9140ee45a34d255edae",
+      "checksums": {
+        "README.md": "5154424fdac013b570c005d56ce8c728375b5bf801b1bb593f1f6666b812c583",
+        "_minimal.py": "12faf40c3efd9b2713c5dcc69084a255d277721d8850245381bf484884f15c1a",
+        "config.json": "26bea792a6f0fd4be0da0390b56f56f9e43dc3211c2c1330957f1df8ebb4cfa1",
+        "requirements.txt": "825bfe00e9f4bb2e06383be9780dd61b041d362fa509eca0b4a0894d42451d7a",
+        "server.py": "57d1100801717f6589bb680907d8f7512179da0425923d5afb66007a1635ede1"
+      }
+    },
+    {
+      "name": "http-bridge",
+      "package_name": "@brain/node-http-bridge",
+      "repo": "brAIn-tools",
+      "subpath": "nodes/http-bridge",
+      "version": "0.1.0",
+      "tags": [
+        "service",
+        "tool",
+        "http",
+        "io"
+      ],
+      "description": "HTTP I/O — fetch URLs, post payloads, surface results on the bus.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "c17be9c65a5d6c2c855ee9140ee45a34d255edae",
+      "checksums": {
+        "config.json": "b846fb7c01990891358dce219239a80c166083c991ada25c098fdbd566f19852",
+        "package.json": "2e74c5a804a732582593e0d81e9bc86a69bdf7b0e47c834fb02ca3dc8e1bbbfe",
+        "src/handler.ts": "8f29b1d47c3e1e76da8d6d149d062901d254e24aa16ced3fc51abab757dc371b",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "llm-basic",
+      "package_name": "@brain/node-llm-basic",
+      "repo": "brAIn-llm",
+      "subpath": "nodes/llm-basic",
+      "version": "0.1.0",
+      "tags": [
+        "llm",
+        "provider",
+        "generic"
+      ],
+      "description": "Generic LLM caller using @brain/core's LLMRegistry. Pluggable provider via env vars.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": true,
+      "ref": "b1f2842d6bec7fcb6a715857886799d12f95ed49",
+      "checksums": {
+        "config.json": "6effb558d5fd37a332139f90bbeb3bac4983782d5251155a702e01b3b4d23ea9",
+        "package.json": "a8bafa72402c3ffbc13989c6f45043fb44e30938221e0a49ad1f1b1bd7e11cec",
+        "src/handler.ts": "8171b2a14147f5a04cbf8f927f6a9edf58267a779f6b6cdc97c7e3a552cb54c5",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "llm-cli",
+      "package_name": "@brain/node-llm-cli",
+      "repo": "brAIn-llm",
+      "subpath": "nodes/llm-cli",
+      "version": "0.1.0",
+      "tags": [
+        "llm",
+        "provider",
+        "cli",
+        "claude",
+        "codex",
+        "gemini"
+      ],
+      "description": "Wraps Claude / Codex / Gemini CLI agents — uses your local CLI installs.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "b1f2842d6bec7fcb6a715857886799d12f95ed49",
+      "checksums": {
+        "config.json": "41475567e2362aca2ec87d6ec1feef87d1c43e6608e51166153a4d6d9b0f5c61",
+        "package.json": "cdd8555e353b86c0f497b177bfb43755480f0fd4ec2462c216ea93afc947cd9f",
+        "src/handler.ts": "8fb30fdc997cc6566c6685d6d4347c8864dfcfbbcba23a71b778f7a1c8aaa952",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "chat",
+      "package_name": "@brain/node-chat",
+      "repo": "brAIn-ui",
+      "subpath": "nodes/chat",
+      "version": "0.1.0",
+      "tags": [
+        "ui",
+        "chat",
+        "human-interface"
+      ],
+      "description": "Browser chat UI — type to send to the network, see node responses inline.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "866e832b259198a159cd4e41de649f10052ebb10",
+      "checksums": {
+        "config.json": "1470e59bc73364aa7304ffba4ef43d77f837cc738d7d1bd345544bdf0d8c83cf",
+        "package.json": "b5e2398dde8930564050377f6c1b6ed3c8afb225b2f0b1af73bf24ad12f44348",
+        "src/handler.ts": "4b53cd6fdc8f62a8c6084e4d7dfee4bc2e982f3ff89c6c5398b9c14895676165",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "5e9bdcd4a8f899c90b9872d78773ba1f12ffa4ec6a4e181af281ef8f32f27b36"
       }
     }
   ]
