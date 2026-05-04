@@ -1,0 +1,62 @@
+name: Refresh registry
+
+# Manual only — never on cron, never on push. Avoids notification
+# spam when third-party node repos receive routine commits. Maintainer
+# triggers explicitly:
+#
+#   gh workflow run refresh-registry.yml
+#
+# The workflow re-clones every repo in registry.repos, recomputes
+# per-file SHA-256 for each node's subpath, bumps each node's `ref`
+# to the upstream HEAD, and opens a PR with the diff. Merging the
+# PR is the explicit human gate that authorizes the new versions
+# for installation by brAIn clients.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run refresh script
+        id: refresh
+        run: node scripts/refresh-registry.mjs
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if git diff --quiet registry.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open PR
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: refresh registry refs + checksums"
+          title: "Refresh registry refs + checksums"
+          body: |
+            Automated refresh of `registry.json` triggered manually.
+
+            Each entry's `ref` was bumped to the current HEAD of its
+            upstream repo, and `checksums` were recomputed from the
+            tracked files at that ref.
+
+            **Merging this PR authorizes brAIn clients to install
+            these versions.** Until then, clients keep installing the
+            previously-merged refs.
+          branch: chore/refresh-registry
+          delete-branch: true
