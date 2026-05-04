@@ -1,13 +1,19 @@
 {
   "$schema": "./registry.schema.json",
   "version": 1,
-  "updated_at": "2026-04-29",
+  "updated_at": "2026-05-04",
   "repos": {
     "brAIn-perception": {
       "url": "https://github.com/tibzejoker/brAIn-perception",
       "clone": "https://github.com/tibzejoker/brAIn-perception.git",
       "default_branch": "main",
       "description": "Voice, gaze and intent perception nodes."
+    },
+    "brAIn-memory": {
+      "url": "https://github.com/tibzejoker/brAIn-memory",
+      "clone": "https://github.com/tibzejoker/brAIn-memory.git",
+      "default_branch": "main",
+      "description": "Memory-domain nodes: KV store, vector store, intelligent gateway, autonomous consolidator, scheduled reminders."
     }
   },
   "nodes": [
@@ -46,6 +52,101 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false
+    },
+    {
+      "name": "memory",
+      "package_name": "@brain/node-memory",
+      "repo": "brAIn-memory",
+      "subpath": "nodes/memory",
+      "version": "0.1.0",
+      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
+      "tags": ["memory", "storage", "knowledge"],
+      "description": "Persistent key-value memory store with tags + free-text search. Per-instance JSON file in ctx.dataDir.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": false,
+      "checksums": {
+        "config.json": "94073a2245c8f3592503599b88db1d0acf863f177591f1a768831f696b743767",
+        "package.json": "f4aa8503f3157b805e9de7d4d2bf42417347db1559bfd2f6111e80ca2f5bc9f7",
+        "src/handler.ts": "c04270f30c3e0a2e6b1c6f614b2aeb623ccfc3b5b466b04c8013edd439ade464",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "memory-vector",
+      "package_name": "@brain/node-memory-vector",
+      "repo": "brAIn-memory",
+      "subpath": "nodes/memory-vector",
+      "version": "0.1.0",
+      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
+      "tags": ["memory", "vector", "rag", "embeddings", "long-term"],
+      "description": "Vector memory store using LanceDB + Ollama embeddings (qwen3-embedding:0.6b, 1024d). Semantic search, indexing, RAG.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": true,
+      "checksums": {
+        "config.json": "4bd36829f80c9f7de0fa3fd4e16d931255dc30ab4fc2b634b015f036ba88bed7",
+        "package.json": "1a3bde2b5971576c1e04a4350e3be8077873974118387df704c410bb6f19f821",
+        "src/handler.ts": "24556d907be286944566706cbe690ab2abb8597aeeeb22f5c6f8280bf854c532",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "memory-proxy",
+      "package_name": "@brain/node-memory-proxy",
+      "repo": "brAIn-memory",
+      "subpath": "nodes/memory-proxy",
+      "version": "0.1.0",
+      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
+      "tags": ["memory", "proxy", "intelligence"],
+      "description": "Intelligent gateway. Receives mem.ask / mem.store, fans out to KV + vector backends, synthesizes a final answer via LLM.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": true,
+      "checksums": {
+        "config.json": "4d81660a66d8468343996fea5927e06684b74728b69f51b7f5b524a0730c319f",
+        "package.json": "a40784f1d658e8dd3b74c09271d19c58eaafb4779634bdb5e9c5b4936c765826",
+        "src/handler.ts": "08ede8d3177d4a60b3c72537b6b7e7848d5dd37d9b0af3332f83b077608bafa2",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
+    },
+    {
+      "name": "memory-consolidator",
+      "package_name": "@brain/node-memory-consolidator",
+      "repo": "brAIn-memory",
+      "subpath": "nodes/memory-consolidator",
+      "version": "0.1.0",
+      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
+      "tags": ["memory", "llm", "maintenance", "autonomous"],
+      "description": "Autonomous memory maintenance — periodically merges duplicates and drops stale entries.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": true,
+      "checksums": {
+        "config.json": "0cf79f6afafd2b0cd18dd89eedd178cf89c04b7cc0f1455a8254677d6298a438",
+        "package.json": "9bf8052b08a7abf9b724a4c2c58b9bbb5d192f58e0cbf6998a4b966ead06071b",
+        "src/handler.ts": "4f63bfdd55ce832e10d8112b38b7fbda64295e8de7bb04bb5293b3f163e71fcc",
+        "tsconfig.json": "1a9f0873fec04475a675b9b11b9402a9eca94c930c65a199019538b9f521b861"
+      }
+    },
+    {
+      "name": "reminder",
+      "package_name": "@brain/node-reminder",
+      "repo": "brAIn-memory",
+      "subpath": "nodes/reminder",
+      "version": "0.1.0",
+      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
+      "tags": ["utility", "scheduler", "reminder"],
+      "description": "Schedules timed reminders. Survives restarts via ctx.dataDir-backed state.",
+      "has_ui": false,
+      "needs_python": false,
+      "needs_ollama": false,
+      "checksums": {
+        "config.json": "8afec81273444c5fa4c188b8cda59f525a999cbe6843066eca24bccb076c4354",
+        "package.json": "74ecf6b4c06c9a17d5d5dce73b4f9dfbed75f44066af6ee0f556045c80b6bea8",
+        "src/handler.ts": "2cedea09641caa1f1b570f03b96c82a132ba8454f0b3ec9b96831c7ad7bb80d2",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+      }
     }
   ]
 }
