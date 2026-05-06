@@ -692,11 +692,11 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "f043b0e1ee5e90324909e3ddaa189d40414ab1b0",
+      "ref": "5128d0d9194d5acdc428ddb9e4099326db79d57c",
       "checksums": {
         "config.json": "a3dac6c0800d3996f90559e8ae4e9e39c7b64cd8ab0803a712f4214e6b036216",
         "package.json": "00f58937df5bc03a33a274b25a35878d40ae7122aa90fd2ca952cf474b08a59d",
-        "src/handler.ts": "bacd5d94bd2a13a63cbd7278311f19fcfa688b17e7953cee9e8cf1440de4c166",
+        "src/handler.ts": "e10991e3196479b5a83c369bf88d59fb5b29f87294ca476e2cbb6ef8e4adda7a",
         "src/stillness.ts": "e56050aedf6465bdcdfd540caa8718c79556124299e62d39d11bd584c5474c43",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "6d213fc85400241ea2f908e60155909825130772b344df1bb29b1eca9547105b"
