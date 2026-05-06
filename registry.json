@@ -1,7 +1,7 @@
 {
   "$schema": "./registry.schema.json",
   "version": 1,
-  "updated_at": "2026-05-05",
+  "updated_at": "2026-05-06",
   "repos": {
     "brAIn-perception": {
       "url": "https://github.com/tibzejoker/brAIn-perception",
@@ -44,6 +44,12 @@
       "clone": "https://github.com/tibzejoker/brAIn.git",
       "default_branch": "main",
       "description": "The brAIn framework itself — sdk, core, api, dashboard. No nodes; everything is in sister repos."
+    },
+    "brAIn-demo-loneliness": {
+      "url": "https://github.com/tibzejoker/brAIn-demo-loneliness",
+      "clone": "https://github.com/tibzejoker/brAIn-demo-loneliness.git",
+      "default_branch": "main",
+      "description": "Demo bundle — passive-aggressive phone (phone-loneliness): mobile sensor → bus → LLM → mobile TTS in one node."
     }
   },
   "nodes": [
@@ -63,7 +69,7 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "ff28e1c76b05d2c9f64082b4195eb298cfbbe5c9",
+      "ref": "b0fba411474f62a974e0e25407e4f60310eb1d6d",
       "checksums": {
         ".gitignore": "5a0f5b76828c9cb4aad3c8be8d2d5d6276d0a2e549b1d9e67c7278700b65f061",
         "README.md": "5c50c8b489fcf589112e5a9089374da88b34fb9faf9aaedf05bbce3f3b2f96e6",
@@ -114,7 +120,7 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "ff28e1c76b05d2c9f64082b4195eb298cfbbe5c9",
+      "ref": "b0fba411474f62a974e0e25407e4f60310eb1d6d",
       "checksums": {
         ".gitignore": "effecf2ddabc0fb37924f21e486add8e703b4cbedc2550ace17daa5850d45398",
         "README.md": "3585effeb91f0ac7860c52f8ab27c827f16c95f2088a82b223f6a51885cf414b",
@@ -167,7 +173,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "ff28e1c76b05d2c9f64082b4195eb298cfbbe5c9",
+      "ref": "b0fba411474f62a974e0e25407e4f60310eb1d6d",
       "checksums": {
         ".gitignore": "dcaa9c6d97ad85714fd7ce29b8a75ee8d898f6b01e29522ace5ddd0e051ada30",
         "README.md": "70c2a4d80e7f8360e3d1edca65dbccba43ead879a8610411bcbeb186cbb247e5",
@@ -198,7 +204,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "ff28e1c76b05d2c9f64082b4195eb298cfbbe5c9",
+      "ref": "b0fba411474f62a974e0e25407e4f60310eb1d6d",
       "checksums": {
         "config.json": "e3b1ea4f80fbf540b31ed73d7609fcad2defabcc2710f924f263f6ec86b81d7b",
         "package.json": "281f9d7f2c66da2357cfd8c4627ea0f3e8fefb72e13538579f411b711ad17008",
@@ -222,7 +228,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
+      "ref": "b44c14f9c9b45f231a1dfd5741e8bc1b541218c1",
       "checksums": {
         "config.json": "94073a2245c8f3592503599b88db1d0acf863f177591f1a768831f696b743767",
         "package.json": "f4aa8503f3157b805e9de7d4d2bf42417347db1559bfd2f6111e80ca2f5bc9f7",
@@ -247,7 +253,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
+      "ref": "b44c14f9c9b45f231a1dfd5741e8bc1b541218c1",
       "checksums": {
         "config.json": "4bd36829f80c9f7de0fa3fd4e16d931255dc30ab4fc2b634b015f036ba88bed7",
         "package.json": "1a3bde2b5971576c1e04a4350e3be8077873974118387df704c410bb6f19f821",
@@ -270,7 +276,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
+      "ref": "b44c14f9c9b45f231a1dfd5741e8bc1b541218c1",
       "checksums": {
         "config.json": "4d81660a66d8468343996fea5927e06684b74728b69f51b7f5b524a0730c319f",
         "package.json": "a40784f1d658e8dd3b74c09271d19c58eaafb4779634bdb5e9c5b4936c765826",
@@ -294,7 +300,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
+      "ref": "b44c14f9c9b45f231a1dfd5741e8bc1b541218c1",
       "checksums": {
         "config.json": "0cf79f6afafd2b0cd18dd89eedd178cf89c04b7cc0f1455a8254677d6298a438",
         "package.json": "9bf8052b08a7abf9b724a4c2c58b9bbb5d192f58e0cbf6998a4b966ead06071b",
@@ -317,7 +323,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "eb81561652a24536bfbabf39072b5265c5ba98f9",
+      "ref": "b44c14f9c9b45f231a1dfd5741e8bc1b541218c1",
       "checksums": {
         "config.json": "8afec81273444c5fa4c188b8cda59f525a999cbe6843066eca24bccb076c4354",
         "package.json": "74ecf6b4c06c9a17d5d5dce73b4f9dfbed75f44066af6ee0f556045c80b6bea8",
@@ -340,7 +346,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "c17be9c65a5d6c2c855ee9140ee45a34d255edae",
+      "ref": "78f3b9135d10ddcac064565261169dfc3e4a678b",
       "checksums": {
         "config.json": "da24106ff3f5e46a1b9b4eeb9f2f4edd7b490f061cd286f76ada09b6620dfdcf",
         "package.json": "f580d18eed419478b4f178992ab8ba979e3b0eb056c98ae36704f2c36a702a2d",
@@ -364,7 +370,7 @@
       "has_ui": false,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "c17be9c65a5d6c2c855ee9140ee45a34d255edae",
+      "ref": "78f3b9135d10ddcac064565261169dfc3e4a678b",
       "checksums": {
         "README.md": "5154424fdac013b570c005d56ce8c728375b5bf801b1bb593f1f6666b812c583",
         "_minimal.py": "12faf40c3efd9b2713c5dcc69084a255d277721d8850245381bf484884f15c1a",
@@ -389,7 +395,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "c17be9c65a5d6c2c855ee9140ee45a34d255edae",
+      "ref": "78f3b9135d10ddcac064565261169dfc3e4a678b",
       "checksums": {
         "config.json": "b846fb7c01990891358dce219239a80c166083c991ada25c098fdbd566f19852",
         "package.json": "2e74c5a804a732582593e0d81e9bc86a69bdf7b0e47c834fb02ca3dc8e1bbbfe",
@@ -412,7 +418,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "b1f2842d6bec7fcb6a715857886799d12f95ed49",
+      "ref": "a1c453b86f8bd1a8e1f47509ead0b1655f58b157",
       "checksums": {
         "config.json": "6effb558d5fd37a332139f90bbeb3bac4983782d5251155a702e01b3b4d23ea9",
         "package.json": "a8bafa72402c3ffbc13989c6f45043fb44e30938221e0a49ad1f1b1bd7e11cec",
@@ -438,7 +444,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "b1f2842d6bec7fcb6a715857886799d12f95ed49",
+      "ref": "a1c453b86f8bd1a8e1f47509ead0b1655f58b157",
       "checksums": {
         "config.json": "41475567e2362aca2ec87d6ec1feef87d1c43e6608e51166153a4d6d9b0f5c61",
         "package.json": "cdd8555e353b86c0f497b177bfb43755480f0fd4ec2462c216ea93afc947cd9f",
@@ -461,7 +467,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "1c4075b6a2119a7e29f9c6d4c903648901f3c50d",
+      "ref": "28ea5b9f239be0824ea6c8e5cdf0a194fa43943a",
       "checksums": {
         "config.json": "1470e59bc73364aa7304ffba4ef43d77f837cc738d7d1bd345544bdf0d8c83cf",
         "package.json": "b5e2398dde8930564050377f6c1b6ed3c8afb225b2f0b1af73bf24ad12f44348",
@@ -486,7 +492,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
       "checksums": {
         "config.json": "473bc091ea0b9f7917c0006f8f5f5d86a4519b460dd8de161bfda9ec2dd4ec8e",
         "package.json": "c2b73000bb40f51d93968335f8e755c5ed15f6af6d95576b103a550c33466e84",
@@ -513,13 +519,14 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
       "checksums": {
-        "config.json": "2320b704481c4a1c77d4c12d1d4125ff64695b27927aefdc6719f73229fc1aec",
+        "config.json": "bf9d359ec9a208a78ca282f12b393e582d93f1d37d2dc691ebc20a7d0563d3ca",
         "package.json": "4864fca1be5c5c3363c450ba66947b3c3d9368fc2baa5d9c2ddf72b5bb063696",
-        "src/handler.ts": "f2a8f3fc79f844ed84473788b44af8f623de441165c009f07ad347a8fcb1c448",
-        "src/template.ts": "6e3b73c483bda4403be92256e28d2ea41fc4e5e7a37820160864b7eda4198117",
-        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
+        "src/handler.ts": "d95bced89c7221bec257964e8ce79f58ec4b4339e6d36200c0b40afaf8330de0",
+        "src/template.ts": "17e0e87a68cfe5af84bb2a702c023935f86391c6393ab5b2766e265651ebde88",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "f117ac2681e226c0e3186373bf522a2dbc4f26c280c71bedc250906cbfe8c5af"
       }
     },
     {
@@ -537,7 +544,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
       "checksums": {
         "config.json": "9b4068eeb2d7980582e314f9a7c022e9c9b19bed17fc2877ce252705bdadc5f7",
         "package.json": "d3e58500429aea611c16d0f431bc01df29011f87d126b49b4dd0f05b38f1f206",
@@ -562,7 +569,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
       "checksums": {
         "config.json": "6a70244c6a914700cd991f29f6c664c54739dc6c0a9206d3bc054bb4b6dd3c24",
         "package.json": "f21a8ca5e726a31ea5aabc99bcec3d14fe0585a84fc91aff1559cce1c48724fa",
@@ -588,7 +595,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
       "checksums": {
         "config.json": "713e71bbd418d4b9e7062b2ef5aef7ef33ddf34d77577c3453f21f4f53617089",
         "package.json": "33d1f389a6b1ecb6f684b001a421a8f33cc0502213c0dca7f02079a074b3bac0",
@@ -611,7 +618,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
       "checksums": {
         "config.json": "97a69609d09e0e34cd987dd3dd246fcb770c7b4207d6a2c02614ab8893ae65d7",
         "package.json": "f422df4e0e5538977baa574b4dc9538c8bc55a38fea960e8daa9f32b45f7f58a",
@@ -634,7 +641,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
       "checksums": {
         "config.json": "5ba0429baa4a03d7a7e29b56bc444e491be9e8510cbd50b1ca593133e4c6f5c5",
         "package.json": "2d8d79bb91a59751e4e77bca4116eea4f0aa9651a0a4b10d8a4cf2bf3e5a38cc",
@@ -657,7 +664,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "4dc036e1ad87b4b3ff6e63aa63bce5e3dbabb021",
+      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
       "checksums": {
         "config.json": "fba5d5bdc304342298bc2d14d0586ae508324d03c0c3199d5c22287afc260e01",
         "package.json": "b58c70c5ad2ed84a766b346115e0b8dd946d704452a6f4ef2ab118e9a8c6d7a9",
@@ -666,6 +673,33 @@
         "src/services.ts": "7b955d09034b79fd4354672b1d7f81dbc9dd1645610a3d716bb234b9ab028429",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "91bc781be159eeedc09dab16ce1cdb068e56f9da9797337ed010033a959c3b1c"
+      }
+    },
+    {
+      "name": "phone-loneliness",
+      "package_name": "@brain/node-phone-loneliness",
+      "repo": "brAIn-demo-loneliness",
+      "subpath": "nodes/phone-loneliness",
+      "version": "0.1.0",
+      "tags": [
+        "demo",
+        "fun",
+        "mobile",
+        "llm",
+        "tts"
+      ],
+      "description": "Detects when a brAIn-mobile phone has been put down (accelerometer steady) and asks an LLM to nag the user via the phone TTS until they pick it up.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": true,
+      "ref": "52ef4dcbf8c5b6f665831eb465e0b99da36650e7",
+      "checksums": {
+        "config.json": "82c915fd1ac944e6fd04e343a8e5611e5bb22d43ca77dc6f79186660aef842e5",
+        "package.json": "00f58937df5bc03a33a274b25a35878d40ae7122aa90fd2ca952cf474b08a59d",
+        "src/handler.ts": "132f33513961e6bf3114bd900f7f2b0f7fb07883943dd3d3b457b9073e48d7fe",
+        "src/stillness.ts": "e56050aedf6465bdcdfd540caa8718c79556124299e62d39d11bd584c5474c43",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "6d213fc85400241ea2f908e60155909825130772b344df1bb29b1eca9547105b"
       }
     }
   ],
