@@ -210,13 +210,38 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "b415183a8c81db7b1cf957933ce76656f6944c8d",
+      "ref": "21b6ab20ab9acd97d07f2045fa7ddb65b00396d6",
       "checksums": {
         "config.json": "64ff965e1c6a6bb4f366d1eec76317729d472b937ec89e54fa08747c7cf6e334",
         "package.json": "47950eea7ae8e92026104a1a64e137df18b7998ff6111c4e63036f8423e6f6dd",
         "src/handler.ts": "a0642e91d4ab19e78a96e782355b30fca1f1144f6372c834aa10789cb14ced94",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "ba0117d47fa6fa8a7f97cd51db37ccfba47cc22bb450a38aef7a72f91c38a871"
+      }
+    },
+    {
+      "name": "whatsapp",
+      "package_name": "@brain/node-whatsapp",
+      "repo": "brAIn-bridges",
+      "subpath": "nodes/whatsapp",
+      "version": "0.1.0",
+      "tags": [
+        "service",
+        "bridge",
+        "whatsapp",
+        "chat"
+      ],
+      "description": "Pair-by-QR bridge between the brAIn chat bus and WhatsApp via Baileys — one conversation across the web chat, the brain, and your phone.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "21b6ab20ab9acd97d07f2045fa7ddb65b00396d6",
+      "checksums": {
+        "config.json": "992ed380bcab60423909e91acf347a43b6764baaf89852234198c610f52ba813",
+        "package.json": "dd3f6b784f2e5748604a3de16aba1209e3331fffd1631f1fc241806182466fc9",
+        "src/handler.ts": "f79c29cabb8fa3df971b0cb797d7b0fc118f3a3e374f3453c02a8545d822a2bd",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "34952d1b01007aa30eef993cdb12f26d25798110903e24ad4c0e7e4ebfffa07e"
       }
     },
     {
