@@ -210,11 +210,11 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "21b6ab20ab9acd97d07f2045fa7ddb65b00396d6",
+      "ref": "bc38c4f414c953bbbe086359d5b231f9a97756fc",
       "checksums": {
         "config.json": "64ff965e1c6a6bb4f366d1eec76317729d472b937ec89e54fa08747c7cf6e334",
         "package.json": "47950eea7ae8e92026104a1a64e137df18b7998ff6111c4e63036f8423e6f6dd",
-        "src/handler.ts": "a0642e91d4ab19e78a96e782355b30fca1f1144f6372c834aa10789cb14ced94",
+        "src/handler.ts": "f9618f400b7774e50207f5c6be76094f204bfd2425c645def3e5756135d090da",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "ba0117d47fa6fa8a7f97cd51db37ccfba47cc22bb450a38aef7a72f91c38a871"
       }
@@ -235,13 +235,38 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "21b6ab20ab9acd97d07f2045fa7ddb65b00396d6",
+      "ref": "bc38c4f414c953bbbe086359d5b231f9a97756fc",
       "checksums": {
         "config.json": "992ed380bcab60423909e91acf347a43b6764baaf89852234198c610f52ba813",
         "package.json": "dd3f6b784f2e5748604a3de16aba1209e3331fffd1631f1fc241806182466fc9",
-        "src/handler.ts": "f79c29cabb8fa3df971b0cb797d7b0fc118f3a3e374f3453c02a8545d822a2bd",
+        "src/handler.ts": "0eed212319e6f0193a5bc69439c131af83e4f4d363457756593fa165604e653b",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "34952d1b01007aa30eef993cdb12f26d25798110903e24ad4c0e7e4ebfffa07e"
+      }
+    },
+    {
+      "name": "discord",
+      "package_name": "@brain/node-discord",
+      "repo": "brAIn-bridges",
+      "subpath": "nodes/discord",
+      "version": "0.1.0",
+      "tags": [
+        "service",
+        "bridge",
+        "discord",
+        "chat"
+      ],
+      "description": "Token-paste bridge between the brAIn chat bus and a Discord bot — listens in DMs, replies on @mention or replies in channels.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "bc38c4f414c953bbbe086359d5b231f9a97756fc",
+      "checksums": {
+        "config.json": "6b6fb34e4bba1545d6822ab1d792ca8d1c9ede969817d94f95d14737a2c7d183",
+        "package.json": "68caa49cee7a18dae3c740fa1a9d369035119cc7db4b467f44550c3dd3ef1a0f",
+        "src/handler.ts": "6f100146900b468f363887f234f5c08ccc0e44c12c8252b79a174d832bca8b17",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "1127455deb3b4967dcd80d17d3aae63a70fe73d5767a0319172fbae9cf91aa09"
       }
     },
     {
@@ -523,13 +548,13 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "5bede99edfb3e6644970baec34450a5135f58ee6",
+      "ref": "a1f39649a6c0b24af579206dfea27e9e7a7dcde0",
       "checksums": {
         "config.json": "63d9985eb459b7b308ba36ff801492950100ca1cb073d70e50ac5c27d1365f59",
         "package.json": "b5e2398dde8930564050377f6c1b6ed3c8afb225b2f0b1af73bf24ad12f44348",
         "src/handler.ts": "4b53cd6fdc8f62a8c6084e4d7dfee4bc2e982f3ff89c6c5398b9c14895676165",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "41f3695c128e5fea7b94400087722cfc723730443e5546f7f5cf9ff07c90c6d4"
+        "ui/index.html": "3078434a8788483f8ff325528455b36b5a43ca0733fdefc9cd61d13b7e844b2a"
       }
     },
     {
