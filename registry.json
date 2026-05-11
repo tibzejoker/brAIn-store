@@ -1,7 +1,7 @@
 {
   "$schema": "./registry.schema.json",
   "version": 1,
-  "updated_at": "2026-05-06",
+  "updated_at": "2026-05-11",
   "repos": {
     "brAIn-perception": {
       "url": "https://github.com/tibzejoker/brAIn-perception",
@@ -50,6 +50,12 @@
       "clone": "https://github.com/tibzejoker/brAIn-demo-loneliness.git",
       "default_branch": "main",
       "description": "Demo bundle — passive-aggressive phone (phone-loneliness): mobile sensor → bus → LLM → mobile TTS in one node."
+    },
+    "brAIn-bridges": {
+      "url": "https://github.com/tibzejoker/brAIn-bridges",
+      "clone": "https://github.com/tibzejoker/brAIn-bridges.git",
+      "default_branch": "main",
+      "description": "brAIn bridges — nodes mirroring chat.input / chat.response to/from external messengers (Telegram, WhatsApp, Discord, …)."
     }
   },
   "nodes": [
@@ -186,6 +192,31 @@
         "src/timeline.ts": "71969c777fe02b3104ab909c8d64355bd9c3162e2b24b7d446a106383df88cd7",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "838403ee7c191c49f594f7664507c8ff614d041566b1bb5e3ecf6a327959b9ae"
+      }
+    },
+    {
+      "name": "telegram",
+      "package_name": "@brain/node-telegram",
+      "repo": "brAIn-bridges",
+      "subpath": "nodes/telegram",
+      "version": "0.1.0",
+      "tags": [
+        "service",
+        "bridge",
+        "telegram",
+        "chat"
+      ],
+      "description": "Mirror a Telegram bot to/from the brAIn chat bus — one conversation across the web chat, the brain, and Telegram.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "b415183a8c81db7b1cf957933ce76656f6944c8d",
+      "checksums": {
+        "config.json": "64ff965e1c6a6bb4f366d1eec76317729d472b937ec89e54fa08747c7cf6e334",
+        "package.json": "47950eea7ae8e92026104a1a64e137df18b7998ff6111c4e63036f8423e6f6dd",
+        "src/handler.ts": "a0642e91d4ab19e78a96e782355b30fca1f1144f6372c834aa10789cb14ced94",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "ba0117d47fa6fa8a7f97cd51db37ccfba47cc22bb450a38aef7a72f91c38a871"
       }
     },
     {
@@ -467,9 +498,9 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "28ea5b9f239be0824ea6c8e5cdf0a194fa43943a",
+      "ref": "5bede99edfb3e6644970baec34450a5135f58ee6",
       "checksums": {
-        "config.json": "1470e59bc73364aa7304ffba4ef43d77f837cc738d7d1bd345544bdf0d8c83cf",
+        "config.json": "63d9985eb459b7b308ba36ff801492950100ca1cb073d70e50ac5c27d1365f59",
         "package.json": "b5e2398dde8930564050377f6c1b6ed3c8afb225b2f0b1af73bf24ad12f44348",
         "src/handler.ts": "4b53cd6fdc8f62a8c6084e4d7dfee4bc2e982f3ff89c6c5398b9c14895676165",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
@@ -492,7 +523,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
+      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
       "checksums": {
         "config.json": "473bc091ea0b9f7917c0006f8f5f5d86a4519b460dd8de161bfda9ec2dd4ec8e",
         "package.json": "c2b73000bb40f51d93968335f8e755c5ed15f6af6d95576b103a550c33466e84",
@@ -519,14 +550,14 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
+      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
       "checksums": {
-        "config.json": "bf9d359ec9a208a78ca282f12b393e582d93f1d37d2dc691ebc20a7d0563d3ca",
+        "config.json": "edc725bccf9ce7a812519d9ac4770e4caf99e474ac51ed4529e22fb2079c016c",
         "package.json": "4864fca1be5c5c3363c450ba66947b3c3d9368fc2baa5d9c2ddf72b5bb063696",
-        "src/handler.ts": "d95bced89c7221bec257964e8ce79f58ec4b4339e6d36200c0b40afaf8330de0",
-        "src/template.ts": "17e0e87a68cfe5af84bb2a702c023935f86391c6393ab5b2766e265651ebde88",
+        "src/handler.ts": "40d35a3a9cb1ee722ffde481f9eaee6ef3eb386f5a8b0544c3cd29c2d3387196",
+        "src/template.ts": "48c02363fc4b2a8592318d0fb1da6209f50634b6a3e5e46d98f98dd87a58fed4",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "f117ac2681e226c0e3186373bf522a2dbc4f26c280c71bedc250906cbfe8c5af"
+        "ui/index.html": "b7328a6814aef2e88e5c3d903e40dc12a33335fe900785b75327ca0a4ccb2a71"
       }
     },
     {
@@ -544,7 +575,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
+      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
       "checksums": {
         "config.json": "9b4068eeb2d7980582e314f9a7c022e9c9b19bed17fc2877ce252705bdadc5f7",
         "package.json": "d3e58500429aea611c16d0f431bc01df29011f87d126b49b4dd0f05b38f1f206",
@@ -569,7 +600,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
+      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
       "checksums": {
         "config.json": "6a70244c6a914700cd991f29f6c664c54739dc6c0a9206d3bc054bb4b6dd3c24",
         "package.json": "f21a8ca5e726a31ea5aabc99bcec3d14fe0585a84fc91aff1559cce1c48724fa",
@@ -595,7 +626,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
+      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
       "checksums": {
         "config.json": "713e71bbd418d4b9e7062b2ef5aef7ef33ddf34d77577c3453f21f4f53617089",
         "package.json": "33d1f389a6b1ecb6f684b001a421a8f33cc0502213c0dca7f02079a074b3bac0",
@@ -618,7 +649,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
+      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
       "checksums": {
         "config.json": "97a69609d09e0e34cd987dd3dd246fcb770c7b4207d6a2c02614ab8893ae65d7",
         "package.json": "f422df4e0e5538977baa574b4dc9538c8bc55a38fea960e8daa9f32b45f7f58a",
@@ -641,7 +672,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
+      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
       "checksums": {
         "config.json": "5ba0429baa4a03d7a7e29b56bc444e491be9e8510cbd50b1ca593133e4c6f5c5",
         "package.json": "2d8d79bb91a59751e4e77bca4116eea4f0aa9651a0a4b10d8a4cf2bf3e5a38cc",
@@ -664,7 +695,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "cb82c3e1cecf55df6196341ae2720047fff65bf2",
+      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
       "checksums": {
         "config.json": "fba5d5bdc304342298bc2d14d0586ae508324d03c0c3199d5c22287afc260e01",
         "package.json": "b58c70c5ad2ed84a766b346115e0b8dd946d704452a6f4ef2ab118e9a8c6d7a9",
@@ -692,11 +723,11 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "0a9b340feb245afae0d24143d194da7d810100c5",
+      "ref": "255ec32bf67701ec3b8e45ee4b266c14dcbaf035",
       "checksums": {
         "config.json": "e2e6abd5c2849873e8abab48352dd0b39f36aa47dc87813f7796edffbf3f7009",
         "package.json": "00f58937df5bc03a33a274b25a35878d40ae7122aa90fd2ca952cf474b08a59d",
-        "src/handler.ts": "3d8c5e720ba0b0a1a53efa7d8e56bc5055d6d72328fb277886beeef04808dde7",
+        "src/handler.ts": "068e2a1e74bd7d2d48f9ac2ab3edb8661c06c24229d2f27c76d206c19bbfdae7",
         "src/stillness.ts": "e56050aedf6465bdcdfd540caa8718c79556124299e62d39d11bd584c5474c43",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "39f410d29758483cfdc5dda946cbf0f6fc29b9ceee79cd7572e51a146f6a4ea6"
