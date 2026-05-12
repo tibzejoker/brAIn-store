@@ -1,7 +1,7 @@
 {
   "$schema": "./registry.schema.json",
   "version": 1,
-  "updated_at": "2026-05-11",
+  "updated_at": "2026-05-12",
   "repos": {
     "brAIn-perception": {
       "url": "https://github.com/tibzejoker/brAIn-perception",
@@ -56,6 +56,12 @@
       "clone": "https://github.com/tibzejoker/brAIn-bridges.git",
       "default_branch": "main",
       "description": "brAIn bridges — nodes mirroring chat.input / chat.response to/from external messengers (Telegram, WhatsApp, Discord, …)."
+    },
+    "brAIn-games": {
+      "url": "https://github.com/tibzejoker/brAIn-games",
+      "clone": "https://github.com/tibzejoker/brAIn-games.git",
+      "default_branch": "main",
+      "description": "brAIn games — LLM-driven game nodes (hangman, tictactoe, …) that play across every connected chat surface."
     }
   },
   "nodes": [
@@ -548,13 +554,13 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "a1f39649a6c0b24af579206dfea27e9e7a7dcde0",
+      "ref": "74fbccb71e8b3afbec4f8cfb9075d995c4d6389b",
       "checksums": {
         "config.json": "63d9985eb459b7b308ba36ff801492950100ca1cb073d70e50ac5c27d1365f59",
         "package.json": "b5e2398dde8930564050377f6c1b6ed3c8afb225b2f0b1af73bf24ad12f44348",
         "src/handler.ts": "4b53cd6fdc8f62a8c6084e4d7dfee4bc2e982f3ff89c6c5398b9c14895676165",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "3078434a8788483f8ff325528455b36b5a43ca0733fdefc9cd61d13b7e844b2a"
+        "ui/index.html": "b3353b96ae8987850a990c4a82be5be2030ddf1fe5ab1e72e6608be5e5ea1a38"
       }
     },
     {
@@ -573,11 +579,11 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
+      "ref": "3581fc9321961e5502ba3d7b3a0c6e9213a35d24",
       "checksums": {
         "config.json": "473bc091ea0b9f7917c0006f8f5f5d86a4519b460dd8de161bfda9ec2dd4ec8e",
         "package.json": "c2b73000bb40f51d93968335f8e755c5ed15f6af6d95576b103a550c33466e84",
-        "src/handler.ts": "8b00f78c07e48b35949c3c36c1bdbb7349eed4453024ef59ef80b84faad3633c",
+        "src/handler.ts": "b2cf1fad94e577ee4164dc888ccf34fc41c6a10106f50984b4f5648a9ccd4997",
         "src/message-formatter.ts": "c3c740e1706f6457bef880ec9f0a26e7c242c6c75b158b805f60affe6874f43e",
         "src/tool-parser.ts": "026ce35f0342b3a43288aff5a918a39c7f725e7981bbf499a056595bd2d1b657",
         "src/tools.ts": "005e986601eb40d5300ab41c4deccbe94cfbcc3b030b6a9388283d0608c6efdd",
@@ -600,7 +606,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
+      "ref": "3581fc9321961e5502ba3d7b3a0c6e9213a35d24",
       "checksums": {
         "config.json": "edc725bccf9ce7a812519d9ac4770e4caf99e474ac51ed4529e22fb2079c016c",
         "package.json": "4864fca1be5c5c3363c450ba66947b3c3d9368fc2baa5d9c2ddf72b5bb063696",
@@ -625,7 +631,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
+      "ref": "3581fc9321961e5502ba3d7b3a0c6e9213a35d24",
       "checksums": {
         "config.json": "9b4068eeb2d7980582e314f9a7c022e9c9b19bed17fc2877ce252705bdadc5f7",
         "package.json": "d3e58500429aea611c16d0f431bc01df29011f87d126b49b4dd0f05b38f1f206",
@@ -650,7 +656,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
+      "ref": "3581fc9321961e5502ba3d7b3a0c6e9213a35d24",
       "checksums": {
         "config.json": "6a70244c6a914700cd991f29f6c664c54739dc6c0a9206d3bc054bb4b6dd3c24",
         "package.json": "f21a8ca5e726a31ea5aabc99bcec3d14fe0585a84fc91aff1559cce1c48724fa",
@@ -676,7 +682,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
+      "ref": "3581fc9321961e5502ba3d7b3a0c6e9213a35d24",
       "checksums": {
         "config.json": "713e71bbd418d4b9e7062b2ef5aef7ef33ddf34d77577c3453f21f4f53617089",
         "package.json": "33d1f389a6b1ecb6f684b001a421a8f33cc0502213c0dca7f02079a074b3bac0",
@@ -699,7 +705,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
+      "ref": "3581fc9321961e5502ba3d7b3a0c6e9213a35d24",
       "checksums": {
         "config.json": "97a69609d09e0e34cd987dd3dd246fcb770c7b4207d6a2c02614ab8893ae65d7",
         "package.json": "f422df4e0e5538977baa574b4dc9538c8bc55a38fea960e8daa9f32b45f7f58a",
@@ -722,7 +728,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
+      "ref": "3581fc9321961e5502ba3d7b3a0c6e9213a35d24",
       "checksums": {
         "config.json": "5ba0429baa4a03d7a7e29b56bc444e491be9e8510cbd50b1ca593133e4c6f5c5",
         "package.json": "2d8d79bb91a59751e4e77bca4116eea4f0aa9651a0a4b10d8a4cf2bf3e5a38cc",
@@ -745,7 +751,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "f09af57819e61a81fafc39ae1959aa3e0a80785f",
+      "ref": "3581fc9321961e5502ba3d7b3a0c6e9213a35d24",
       "checksums": {
         "config.json": "fba5d5bdc304342298bc2d14d0586ae508324d03c0c3199d5c22287afc260e01",
         "package.json": "b58c70c5ad2ed84a766b346115e0b8dd946d704452a6f4ef2ab118e9a8c6d7a9",
@@ -781,6 +787,55 @@
         "src/stillness.ts": "e56050aedf6465bdcdfd540caa8718c79556124299e62d39d11bd584c5474c43",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "39f410d29758483cfdc5dda946cbf0f6fc29b9ceee79cd7572e51a146f6a4ea6"
+      }
+    },
+    {
+      "name": "hangman",
+      "package_name": "@brain/node-hangman",
+      "repo": "brAIn-games",
+      "subpath": "nodes/hangman",
+      "version": "0.1.0",
+      "tags": [
+        "game",
+        "hangman",
+        "llm"
+      ],
+      "description": "Hangman game node. LLM picks a themed word, the player guesses letter by letter — same game mirrored across the web chat, Telegram, WhatsApp, Discord.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": true,
+      "ref": "5ea5fca9dc20f69f72233767ebc2b28daff912b2",
+      "checksums": {
+        "config.json": "bd884a35e75c89a0c80d857da8bb6c35a0f749867c15b5fdeb0ca756d5a72d9e",
+        "package.json": "12306d4b51d1cf690e3a11ce8284e4e2564d8e0d67a662d1a8d5a1770dbcff70",
+        "src/handler.ts": "9ee9230c00f6004c98bab568c56c50c6598da3c54b9682116a04caefc5d098ec",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "ea2c1d84ff8d815fff18f88826eb55f85d59de1fcf45adc9acca86d51e8e7c40"
+      }
+    },
+    {
+      "name": "tictactoe",
+      "package_name": "@brain/node-tictactoe",
+      "repo": "brAIn-games",
+      "subpath": "nodes/tictactoe",
+      "version": "0.1.0",
+      "tags": [
+        "game",
+        "tictactoe",
+        "morpion",
+        "llm"
+      ],
+      "description": "Tic-tac-toe (morpion) — you play X (or O) against an LLM opponent. Numpad-indexed board. Moves come from the UI buttons or any chat surface.",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": true,
+      "ref": "5ea5fca9dc20f69f72233767ebc2b28daff912b2",
+      "checksums": {
+        "config.json": "7c2c5ec461b8508d14ee1036a30e4f3bbdf5c678cddeb283578b94c57c7e54d8",
+        "package.json": "e61f760560902ea7fc20ee1888a7f645b1ad71caf136f1a6dc070cd99becc149",
+        "src/handler.ts": "bf853bea9c0f3df6f608da4bb3c695b906f62a46292dbcdc2b151a41e1decde9",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "2bc8fb4dd73463d62e979be856e15ea10c83a0ae6847fb054c996e53b9cf8970"
       }
     }
   ],
