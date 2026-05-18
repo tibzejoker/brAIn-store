@@ -8,55 +8,52 @@ name: Refresh registry
 #
 # The workflow re-clones every repo in registry.repos, recomputes
 # per-file SHA-256 for each node's subpath, bumps each node's `ref`
-# to the upstream HEAD, and opens a PR with the diff. Merging the
-# PR is the explicit human gate that authorizes the new versions
-# for installation by brAIn clients.
+# to the upstream HEAD, then commits the new registry.json STRAIGHT
+# TO MAIN. No intermediate PR — this is a maintenance dispatch that
+# only fires on explicit human action, and CI on main still runs
+# afterwards (gitleaks, trufflehog, registry.json parses) to catch
+# any malformed output.
+#
+# Auth: needs a PAT (secret `MARKETPLACE_PUSH_TOKEN`) acting as the
+# repo owner, because the default GITHUB_TOKEN cannot bypass branch
+# protection. The repo owner's admin-bypass authorisation handles
+# the protected-branch push.
+#
+# Create the PAT once at https://github.com/settings/personal-access-tokens/new
+#   - Resource owner: tibzejoker
+#   - Repository access: tibzejoker/brAIn-store
+#   - Permissions: Contents: Read and write
+# then add it as a repo secret named MARKETPLACE_PUSH_TOKEN.
 
 on:
   workflow_dispatch:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.MARKETPLACE_PUSH_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
 
       - name: Run refresh script
-        id: refresh
         run: node scripts/refresh-registry.mjs
 
-      - name: Detect changes
-        id: diff
+      - name: Commit + push direct to main
         run: |
           if git diff --quiet registry.json; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "registry already in sync — nothing to push."
+            exit 0
           fi
-
-      - name: Open PR
-        if: steps.diff.outputs.changed == 'true'
-        uses: peter-evans/create-pull-request@v6
-        with:
-          commit-message: "chore: refresh registry refs + checksums"
-          title: "Refresh registry refs + checksums"
-          body: |
-            Automated refresh of `registry.json` triggered manually.
-
-            Each entry's `ref` was bumped to the current HEAD of its
-            upstream repo, and `checksums` were recomputed from the
-            tracked files at that ref.
-
-            **Merging this PR authorizes brAIn clients to install
-            these versions.** Until then, clients keep installing the
-            previously-merged refs.
-          branch: chore/refresh-registry
-          delete-branch: true
+          git config user.name "Thibaut Leaux"
+          git config user.email "thibaut-leaux-angeli@live.fr"
+          git add registry.json
+          git commit -m "chore(registry): refresh refs + checksums"
+          git push origin main
