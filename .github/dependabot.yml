@@ -1,10 +1,17 @@
-# Weekly dependency PRs — github-actions only. This repo is a static
-# registry JSON store with no runtime deps, so no npm/pub block. We
-# DON'T enable auto-merge: action-version bumps occasionally ship
-# breaking changes that we want to eyeball before they hit main.
+# Weekly dependency PRs — GitHub Actions only (this repo has no
+# runtime deps, just a registry JSON store). Minor + patch grouped,
+# MAJORS IGNORED — action-version majors are breaking by definition
+# (input/output surface changes) and need a human read of the
+# release notes.
 version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
     schedule: { interval: weekly, day: monday }
-    open-pull-requests-limit: 3
+    open-pull-requests-limit: 2
+    groups:
+      actions-minor-and-patch:
+        update-types: [minor, patch]
+    ignore:
+      - dependency-name: "*"
+        update-types: [version-update:semver-major]
