@@ -1,0 +1,28 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Cancel older runs on the same ref — registry.json edits land
+# frequently and we only care that the latest version parses.
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  json:
+    # No schema.json is checked in (yet), so this is just a JSON
+    # parseability gate — catches trailing commas, dangling quotes,
+    # the usual hand-edit fumbles. When we add schema.json this job
+    # should switch to `npx ajv validate -s schema.json -d registry.json`.
+    name: registry.json parses
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node -e "JSON.parse(require('fs').readFileSync('registry.json'))"
