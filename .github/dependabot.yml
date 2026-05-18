@@ -1,0 +1,10 @@
+# Weekly dependency PRs — github-actions only. This repo is a static
+# registry JSON store with no runtime deps, so no npm/pub block. We
+# DON'T enable auto-merge: action-version bumps occasionally ship
+# breaking changes that we want to eyeball before they hit main.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule: { interval: weekly, day: monday }
+    open-pull-requests-limit: 3
