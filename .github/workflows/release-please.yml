@@ -1,0 +1,25 @@
+name: release-please
+
+# brAIn-store has no language-specific manifest (no package.json, no
+# pubspec.yaml — it's a static registry JSON store). The `simple`
+# strategy bumps a `version.txt` at the repo root, which release-please
+# creates on the first run if it doesn't exist yet.
+#
+# See release-please.yml in any sibling repo for the conventional-commit
+# bump table.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          release-type: simple
