@@ -1,0 +1,21 @@
+# brAIn-store gitleaks config.
+#
+# The registry.json maps every shipped file to its SHA-256 digest for
+# marketplace install-time verification. Those 64-char hex strings sit
+# one line below a `"...": "` key and trip gitleaks' generic-api-key
+# rule. Mirror the allowlist from the workspace-root .gitleaks.toml so
+# this repo's CI scans cleanly while the underlying secret detection
+# keeps running.
+
+title = "brAIn-store gitleaks"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Known-good 64-hex marketplace fingerprints in registry.json"
+# Match any 64-hex value whose JSON key ends in a file extension we
+# actually ship checksums for. Exactly the registry.json shape.
+regexes = [
+  '''"[a-zA-Z0-9_/.\-]+\.(py|ts|tsx|js|jsx|json|yaml|yml|css|html|md|txt|sh|mjs|cjs)":\s*"[a-f0-9]{64}"''',
+]
