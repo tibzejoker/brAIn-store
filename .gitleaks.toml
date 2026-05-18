@@ -13,9 +13,12 @@ title = "brAIn-store gitleaks"
 useDefault = true
 
 [allowlist]
-description = "Known-good 64-hex marketplace fingerprints in registry.json"
-# Match any 64-hex value whose JSON key ends in a file extension we
-# actually ship checksums for. Exactly the registry.json shape.
-regexes = [
-  '''"[a-zA-Z0-9_/.\-]+\.(py|ts|tsx|js|jsx|json|yaml|yml|css|html|md|txt|sh|mjs|cjs)":\s*"[a-f0-9]{64}"''',
+description = "Skip the marketplace registry file — it's pure metadata (SHA-256 fingerprints + repo descriptors), not credentials"
+# Path-based allowlist (not regex) — robust against legitimately
+# extension-less filenames like `.gitignore` whose 64-hex SHA-256
+# digests live in the same JSON. registry.json is the ONLY place
+# we hand-write 64-hex strings; everything else still gets the
+# default ruleset.
+paths = [
+  '''registry\.json''',
 ]
