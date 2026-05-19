@@ -1,7 +1,7 @@
 {
   "$schema": "./registry.schema.json",
   "version": 1,
-  "updated_at": "2026-05-18",
+  "updated_at": "2026-05-19",
   "repos": {
     "brAIn-perception": {
       "url": "https://github.com/tibzejoker/brAIn-perception",
