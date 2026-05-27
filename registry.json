@@ -1,7 +1,7 @@
 {
   "$schema": "./registry.schema.json",
   "version": 1,
-  "updated_at": "2026-05-19",
+  "updated_at": "2026-05-27",
   "repos": {
     "brAIn-perception": {
       "url": "https://github.com/tibzejoker/brAIn-perception",
@@ -81,7 +81,7 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "0c3d25523caaf7c0a029e4fefbe9d2b50fec3f50",
+      "ref": "19e440abbf9d82c99765cd952b9533932fa60ab9",
       "checksums": {
         ".gitignore": "5a0f5b76828c9cb4aad3c8be8d2d5d6276d0a2e549b1d9e67c7278700b65f061",
         "README.md": "5c50c8b489fcf589112e5a9089374da88b34fb9faf9aaedf05bbce3f3b2f96e6",
@@ -132,7 +132,7 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "0c3d25523caaf7c0a029e4fefbe9d2b50fec3f50",
+      "ref": "19e440abbf9d82c99765cd952b9533932fa60ab9",
       "checksums": {
         ".gitignore": "effecf2ddabc0fb37924f21e486add8e703b4cbedc2550ace17daa5850d45398",
         "README.md": "3585effeb91f0ac7860c52f8ab27c827f16c95f2088a82b223f6a51885cf414b",
@@ -185,14 +185,14 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "0c3d25523caaf7c0a029e4fefbe9d2b50fec3f50",
+      "ref": "19e440abbf9d82c99765cd952b9533932fa60ab9",
       "checksums": {
         ".gitignore": "dcaa9c6d97ad85714fd7ce29b8a75ee8d898f6b01e29522ace5ddd0e051ada30",
         "README.md": "70c2a4d80e7f8360e3d1edca65dbccba43ead879a8610411bcbeb186cbb247e5",
         "config.json": "942778c91e9eba3aeae72726987f6a2b695eddd619aef056500f4e157b09e63e",
         "package.json": "7b3dbb2be0eeb1940ea197b479cd045b7cedd9e17b2c518b881a03f3ea94b971",
         "src/correlator.ts": "ff631fbb8071ae72cf7f381ed8647c22642d82b34f90432f5e63ae1be212fcee",
-        "src/handler.ts": "e5a1bfc3a182d5fb94c158537bbddb1eac55fa5ff935c3ec284ea4a0052f6d13",
+        "src/handler.ts": "bdffdfa3d62f7c1ce1fd88e0f98b3684e9be6bc2bcd6ddc6bce4c5ef05fec59c",
         "src/server.ts": "570e1ddd32cb2db099bd2f0d48a14308993ecdf9947d48ad09adfea8de3a491b",
         "src/store.ts": "7c4cbcdf9fdce7236fd85b09edaacf1dbaeed4f17535152e8c17355418cfa075",
         "src/timeline.ts": "71969c777fe02b3104ab909c8d64355bd9c3162e2b24b7d446a106383df88cd7",
@@ -216,14 +216,14 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "6a0007ede5deefce03a07a6eec7d83f86daca15b",
+      "ref": "0fa97e85af6b921f19427c6b9c7f53ae1893df11",
       "checksums": {
         "config.json": "2d1b35b7c6d2c1baf982227cb53115859d73845916ddf59361494d662820dfea",
         "package.json": "75dee1c995067898322c3e0950295a56a6938ca95f526932b10e4885f6e69a7e",
         "src/handler.ts": "bde75b369395b803abfc6fbdf526c137066de1c18ad23652e32162e107f5e178",
         "tests/telegram-bridge-handler.test.ts": "468f9d9cf8fd13093a3d229d9ba1569e7940740f1e37de87aa7f515d849896cc",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "75b4eb8010bd608224b710d29b2aada1ebcf08371a39e27aa059dafb171c7bd8",
+        "ui/index.html": "cf163200fad9da1bf6c6afd4c98df28c6c50afd3ce80e913c916dbedd5fb6a04",
         "vitest.config.ts": "32c755ebe06c844913695606feb04f8854016cf1699ae45940c5028dc467ead5"
       }
     },
@@ -243,14 +243,14 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "6a0007ede5deefce03a07a6eec7d83f86daca15b",
+      "ref": "0fa97e85af6b921f19427c6b9c7f53ae1893df11",
       "checksums": {
         "config.json": "85074bd3332e2abc17e393af3ee44f889e66f805ebe792f00a3e7e9fa96d417a",
         "package.json": "2fb0fdeebfcea7247a5594bc5edf90c89d775b6b6bb64d47bbde95815fabac81",
         "src/handler.ts": "11439cc6c62208a8ebbc9e8609cd4fe41f119d8a09d6460ba9154668dd30679b",
         "tests/whatsapp-bridge-handler.test.ts": "a6596f33c0880da9e738230a8aa57c0bcdf868f1d03b5fc5e3dcff6475ee66bb",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "886799e0ca0adc556be1ab2d7f62fbb04bb27705cdd6473a4d5f08bd94ca547f",
+        "ui/index.html": "c3190d03b2fe579932972da1632829410752b193d93017aee8348ea754d29de5",
         "vitest.config.ts": "32c755ebe06c844913695606feb04f8854016cf1699ae45940c5028dc467ead5"
       }
     },
@@ -270,14 +270,14 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "6a0007ede5deefce03a07a6eec7d83f86daca15b",
+      "ref": "0fa97e85af6b921f19427c6b9c7f53ae1893df11",
       "checksums": {
         "config.json": "97fc218100cd689e8acd2406db8c9e1c570ff3630c4a66de8c56df94d9e5fa74",
         "package.json": "546e3d835c056f0ec9adb6ea571440bdf96c7c4995785a0fc8689302fea13873",
         "src/handler.ts": "b5e0d3853b1635b8882d4f233ae4e5ad2d84926741f4e8a2bfe9b2ba5e76e4de",
         "tests/discord-bridge-handler.test.ts": "8fe28528ebf6aabedec223c9adf347aaaa8918140a44ecc9f12b1cf011794f91",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "748a9c28a2423c13bccd1b3d90b21fa98c89237a70fc5bba8224e00c7bf8ec82",
+        "ui/index.html": "1905c216726d29e73070ebeae14039861c8ee9dcbe7711d17d5bbabf6df9121e",
         "vitest.config.ts": "32c755ebe06c844913695606feb04f8854016cf1699ae45940c5028dc467ead5"
       }
     },
@@ -297,14 +297,14 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "0c3d25523caaf7c0a029e4fefbe9d2b50fec3f50",
+      "ref": "19e440abbf9d82c99765cd952b9533932fa60ab9",
       "checksums": {
         "config.json": "c4e7bf55b8e3dbe2da0391be9524f1d4624975bbabaf326c0b21dc84434df829",
         "package.json": "3923cdb76142e66bf1c566abc8b1824e7606dc1c81f49244e89d4fd8c54c621c",
-        "src/handler.ts": "24ec960dd87fa6417bd84d76ef5b23b0a61952c9e96c80a8a80027badc24f370",
+        "src/handler.ts": "a18ae001977ad73482313271916f5d9e0b3186ebd7f3068d422729aa8e4e2660",
         "tests/tts-handler.test.ts": "4dc4a508f9004b971dbe884cdc625c50928a45ade0b9a40c5e5fc33ce7ddc6ad",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "991fef75410cc93f96d1fba39eb0944b6a6a5b8129e8926b98f5df5ad214799a",
+        "ui/index.html": "2e2f4512d4ccd7245fadbf943c663ea201a2ec0af71a1600f8ca524332b55634",
         "vitest.config.ts": "32c755ebe06c844913695606feb04f8854016cf1699ae45940c5028dc467ead5"
       }
     },
@@ -323,7 +323,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "3b038a5525a291022f136c584e68f1686dbcf45b",
+      "ref": "87e366d7f250f7bfb553384b78a5317ccc1e178a",
       "checksums": {
         "config.json": "75965ace49bf9aa0847bf83d53299849f1474c1b0c3634d110f12ad663986d2f",
         "package.json": "624686dbd03a7ede109d696b22666ce67031d1037f951ec0c0dfb1948606e192",
@@ -350,7 +350,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "3b038a5525a291022f136c584e68f1686dbcf45b",
+      "ref": "87e366d7f250f7bfb553384b78a5317ccc1e178a",
       "checksums": {
         "config.json": "01cbcd2305b1aa7901f9c40c9437678f3f37407f47b3b9ed6716240d0b6026ac",
         "package.json": "f6faf53d74f703a58edeeb03db24c8ac5f628fcf85905e628a6a6a48a1bd5236",
@@ -376,9 +376,9 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "3b038a5525a291022f136c584e68f1686dbcf45b",
+      "ref": "87e366d7f250f7bfb553384b78a5317ccc1e178a",
       "checksums": {
-        "config.json": "5303e77ceb3576a506cf392969f152abe3c08f4a0d8819aeeae7f63b5b61fd2b",
+        "config.json": "9f43770daa313fe2138041e586f14496cfd7f03190878c377a5dc73fb185081f",
         "package.json": "36552bb49738734c29201f70de7973b70748578f148a45d44a78f946f680ff31",
         "src/handler.ts": "5d762c62ab3f6a2121b1abb076eb1ba8f0315474fffd7ca9749203b576930fed",
         "tests/_helpers/storeprojects-dirs.ts": "3e6213077258c7590c2f62896b1cf5306a4a51f015c28a31eb866b98aa3e48c5",
@@ -405,9 +405,9 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "3b038a5525a291022f136c584e68f1686dbcf45b",
+      "ref": "87e366d7f250f7bfb553384b78a5317ccc1e178a",
       "checksums": {
-        "config.json": "ab660a87078ed1f46e4a607475b8e4e394ccd8e456c76c8ba96944af41e36713",
+        "config.json": "618789ad030b5e8fa3d1136ac70306de6dc4d201d829de24d2216fd6033da10a",
         "package.json": "cf8f68916e9ff6a4888f50e1ffc618e4f87cefb045b1271178734f116ba34c69",
         "src/handler.ts": "b6e9846a0028b14309641eebe3ffb0e7d90d05a9f1ce422bee24c7313b7bbe94",
         "tests/_helpers/storeprojects-dirs.ts": "3e6213077258c7590c2f62896b1cf5306a4a51f015c28a31eb866b98aa3e48c5",
@@ -431,7 +431,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "3b038a5525a291022f136c584e68f1686dbcf45b",
+      "ref": "87e366d7f250f7bfb553384b78a5317ccc1e178a",
       "checksums": {
         "config.json": "72ec7a4ae79e0a1bd1e83149d622d486e41582006965ffbf0731d6f3cd2ef8e6",
         "package.json": "74ecf6b4c06c9a17d5d5dce73b4f9dfbed75f44066af6ee0f556045c80b6bea8",
@@ -528,7 +528,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "7320e3d613d1a847e09de9deaf4012ec806903b7",
+      "ref": "0e04d5c1674314f235eb6a0ddb0c2690cca6447c",
       "checksums": {
         "config.json": "6effb558d5fd37a332139f90bbeb3bac4983782d5251155a702e01b3b4d23ea9",
         "package.json": "a8bafa72402c3ffbc13989c6f45043fb44e30938221e0a49ad1f1b1bd7e11cec",
@@ -554,11 +554,11 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "7320e3d613d1a847e09de9deaf4012ec806903b7",
+      "ref": "0e04d5c1674314f235eb6a0ddb0c2690cca6447c",
       "checksums": {
         "config.json": "41475567e2362aca2ec87d6ec1feef87d1c43e6608e51166153a4d6d9b0f5c61",
         "package.json": "cdd8555e353b86c0f497b177bfb43755480f0fd4ec2462c216ea93afc947cd9f",
-        "src/handler.ts": "8fb30fdc997cc6566c6685d6d4347c8864dfcfbbcba23a71b778f7a1c8aaa952",
+        "src/handler.ts": "bb98665ee1c55330d7c295e2c3b96d1f3a202dca2068a54b6bafa1fef22d00aa",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
       }
     },
@@ -577,13 +577,13 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "4409d2487cf7370c1b8885760e910f20c3785efe",
+      "ref": "ba46ea280cd5557ee6dcd2bd0f866ea7058f0d23",
       "checksums": {
-        "config.json": "9964a28edb5e2fbe6e13f0fb0124339186532ae1b7aba9440d765816c2ee47bc",
+        "config.json": "9a56a21f767d3fa9af5aaf6d60aba2d21c4c7b720660273d524d556a7f14f03f",
         "package.json": "b5e2398dde8930564050377f6c1b6ed3c8afb225b2f0b1af73bf24ad12f44348",
-        "src/handler.ts": "6349e6e82b1f0ec1b145b3580576680adf3239ffb087d5ac6407b40527e96464",
+        "src/handler.ts": "5983dedd3798fa7fc8233e06a090c00a48e6031c339f6da3e149e5e06f48f002",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "c770941baf47d57a85da332ca38b6c95bae7705658fb2ad050a82bc225d22c90"
+        "ui/index.html": "4561423cba2a793184e6bf6ea3b0a9259d1e7377244c197c8188e770498fcaf4"
       }
     },
     {
@@ -602,21 +602,21 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "a905073361ff8d7ec7f43deb62011cbbe0508008",
+      "ref": "84ace3a9a759f1244e0100f7a4da2f7cadfd3c04",
       "checksums": {
-        "config.json": "f0056f2815621fcc678d260742b7e053b6c27ffd844f9a530592938b7b46b309",
+        "config.json": "85fea78b28fa29164895aa92813377aa16c29b5867ecf4676e9a8d623ba12911",
         "package.json": "f9d869c8e3233434a733b9a15212175eac06a35a46d40d0f5467c120b49b4fc6",
-        "src/handler.ts": "cb4234588f56b7dc6befe8b217acbddfc1c61827f259b8f97887aebd22aa1498",
+        "src/handler.ts": "6ddc1f622b56374893a6b76083c636a5f24b6cdbd829274b8868e4e6da9c023e",
         "src/message-formatter.ts": "c3c740e1706f6457bef880ec9f0a26e7c242c6c75b158b805f60affe6874f43e",
         "src/tool-parser.ts": "026ce35f0342b3a43288aff5a918a39c7f725e7981bbf499a056595bd2d1b657",
         "src/tools.ts": "9becfb1fa6ebed57c4380f2ab5fbca573cad2ff136d2c3f4f252a61bfe767185",
         "tests/_helpers/storeprojects-dirs.ts": "3e6213077258c7590c2f62896b1cf5306a4a51f015c28a31eb866b98aa3e48c5",
-        "tests/brain-node.test.ts": "1e41b3fa0d43df3ea16e10417389c7fb853b88599fcb92cb7eab63695f22a173",
+        "tests/brain-node.test.ts": "8fdd04ed5ab87a43b77100bd65ac5fe9165d72dd669ef68df0fc643977e944a8",
         "tests/e2e-budget.test.ts": "ae6c5696b9dec6ea908225c255f26c94ba7a61b20e802b87cf3da23837360e0f",
         "tests/message-formatter.test.ts": "0386fe324960f49d8578cc0615013d86d0a2f9a5f0b9128dc8cc2ee9ebc2119b",
         "tests/tool-parser.test.ts": "04bb5036397a3b64e5923dc0381a0cf78e43e77d96b5e72878007791ae8beee7",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "d74a221da33c6b4fa8189ec2fbc717f8b628927be478b7b8282f3fc2d33aa603",
+        "ui/index.html": "d50a1871354ce4e775ec505810501a576c89153b368abb82df9a0d0155e45aa8",
         "vitest.config.ts": "32c755ebe06c844913695606feb04f8854016cf1699ae45940c5028dc467ead5"
       }
     },
@@ -635,26 +635,27 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "a905073361ff8d7ec7f43deb62011cbbe0508008",
+      "ref": "84ace3a9a759f1244e0100f7a4da2f7cadfd3c04",
       "checksums": {
         "config.json": "26b3df03c75f300bf3b70777154732d9bb372a420de37a76f150133f9f123480",
         "package.json": "bb50aedaea7e5888a2db1a111c1fdf15f1ec57f4f8550f5a64a7a8c9b9e76102",
-        "src/handler.ts": "5d25d41307415a4349388293ddcf08afa3cef4cfad5e63d321ef1ceb4e4e6fdd",
-        "src/template.ts": "babdc5ff4f01f6308e24d15c2623a077c3bbdeabee7e6f951f01ce3870b66e61",
-        "template/config.json": "bfb010bba4ebf1f86b68b0f55f4742fd68a2ab3c5ee83ab6b00a2e96904873dd",
+        "src/handler.ts": "3c0ba5cbb2cc2f3a8512319164b2d7d4113d1b46335f2d1a3e25c216e57dd28b",
+        "src/template.ts": "78b0e8b58f3619e694b33861b3c7fceb62f1b2c011f5adf9e18c5725df165442",
+        "template/config.json": "f1b6b292a500cc344cc8832e8f5eef109e57a48353308aca08a62537a44a073d",
         "template/package.json": "864b78bb309549eaea7f6a32de34b8368a111951a355389a5245d1a5e78c8536",
         "template/src/db.ts": "5bb44caf37baeae130eee1bdf7eed67dad8621250918696d6e79926f7dcd3ba1",
         "template/src/handler.ts": "cdcf9dfde58d899d5bc6093ac9505cd15314e0e9e925bc44d8217652f0550f16",
         "template/tests/handler.e2e.test.ts": "d2448a6c1d2d660d024523d8537a4aca28da6c42416efcb77b9c0042a29fd99f",
         "template/tests/handler.test.ts": "709d0fa60c3fc6dee08c7bea8b6927c2d079fb818a2eb1cae531a5b0a98f4d01",
         "template/tsconfig.json": "4bb508e5058e7f3eaedf3f6fed380c31e083108cc160e0fd1afa35df972dcad4",
+        "template/ui/index.html": "51d941c619cea595dee7de9d797bf21ef07ae7aaf18c4b2db0eb4fd42ced4040",
         "template/vitest.config.ts": "bb3ceec678bcc8d2f26eeec7bd6f066128e30e9ac000dd94f47a8bca779f8751",
         "tests/_helpers/storeprojects-dirs.ts": "3e6213077258c7590c2f62896b1cf5306a4a51f015c28a31eb866b98aa3e48c5",
         "tests/developer-helpers.test.ts": "9501196fe63197202fb984394e56a34593be31044d3d6cf0d22ad101f93b1544",
         "tests/developer-topics.test.ts": "a4cf81288c5d24a848360f53f7b2ab1000737005498d1fb8e7f357387db48c7f",
         "tests/developer.test.ts": "2cdccb5dab60c25e94f507c044d13b139e74b913819cd2dfb84b04d94432d12f",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "887eff361e7c7c2d49591f3b1fe3ce9f07dd91549997dd4a53f54a6ce0506312",
+        "ui/index.html": "c4d15b23f4963910704e32ee6b2611e96cc79a174bdd499223128c870fa2779e",
         "vitest.config.ts": "32c755ebe06c844913695606feb04f8854016cf1699ae45940c5028dc467ead5"
       }
     },
@@ -673,7 +674,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "a905073361ff8d7ec7f43deb62011cbbe0508008",
+      "ref": "84ace3a9a759f1244e0100f7a4da2f7cadfd3c04",
       "checksums": {
         "config.json": "c30e224daf89c3397d3310f5544e19aa1a6f8e01982b7f9c4ced09999f763f6a",
         "package.json": "d3e58500429aea611c16d0f431bc01df29011f87d126b49b4dd0f05b38f1f206",
@@ -698,13 +699,13 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "a905073361ff8d7ec7f43deb62011cbbe0508008",
+      "ref": "84ace3a9a759f1244e0100f7a4da2f7cadfd3c04",
       "checksums": {
         "config.json": "6a70244c6a914700cd991f29f6c664c54739dc6c0a9206d3bc054bb4b6dd3c24",
         "package.json": "f21a8ca5e726a31ea5aabc99bcec3d14fe0585a84fc91aff1559cce1c48724fa",
         "src/connect.ts": "a28d855622da989a681e2faeff113a5b2a4a0273472c53f01df4b0d6423c80ef",
         "src/handler.ts": "71c752ea8f71a457ebded1c4ea1b08c0a23c1d7778170147a3045d499ad2924c",
-        "src/oauth.ts": "9042fb6b6969f2f8ec28e1074a3c8b3974be585fde2cfc8f39fc49cd10e284c1",
+        "src/oauth.ts": "109161226f9858951ab865bfb8606218eb51ed5f8ea7c863526f00d01341900b",
         "src/parse.ts": "cfbbf48805c526b543b1435457bcc8aa66fc8a5ada798e6122d386ff095ab50d",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9"
       }
@@ -724,7 +725,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "a905073361ff8d7ec7f43deb62011cbbe0508008",
+      "ref": "84ace3a9a759f1244e0100f7a4da2f7cadfd3c04",
       "checksums": {
         "config.json": "713e71bbd418d4b9e7062b2ef5aef7ef33ddf34d77577c3453f21f4f53617089",
         "package.json": "10cdbff2f1250471a1273ac2b559755200aebf0f4af848656fd2662e2589cccf",
@@ -747,7 +748,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "a905073361ff8d7ec7f43deb62011cbbe0508008",
+      "ref": "84ace3a9a759f1244e0100f7a4da2f7cadfd3c04",
       "checksums": {
         "config.json": "97a69609d09e0e34cd987dd3dd246fcb770c7b4207d6a2c02614ab8893ae65d7",
         "package.json": "da69e544855eb6e8826df4b01c6963b92ab4a1a543ad000c8faae56a39e04787",
@@ -770,7 +771,7 @@
       "has_ui": false,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "a905073361ff8d7ec7f43deb62011cbbe0508008",
+      "ref": "84ace3a9a759f1244e0100f7a4da2f7cadfd3c04",
       "checksums": {
         "config.json": "5ba0429baa4a03d7a7e29b56bc444e491be9e8510cbd50b1ca593133e4c6f5c5",
         "package.json": "2d8d79bb91a59751e4e77bca4116eea4f0aa9651a0a4b10d8a4cf2bf3e5a38cc",
@@ -793,7 +794,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "a905073361ff8d7ec7f43deb62011cbbe0508008",
+      "ref": "84ace3a9a759f1244e0100f7a4da2f7cadfd3c04",
       "checksums": {
         "config.json": "766ca4a8a206eb59ce82e31c1836bc351f38d9cf0444a05390a5a26ed972eb38",
         "package.json": "b58c70c5ad2ed84a766b346115e0b8dd946d704452a6f4ef2ab118e9a8c6d7a9",
@@ -801,7 +802,7 @@
         "src/intent-client.ts": "9def6db5a714b183e4878234d46ef08702d21023ad15471b727064abf87d9d1c",
         "src/services.ts": "7b955d09034b79fd4354672b1d7f81dbc9dd1645610a3d716bb234b9ab028429",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "6d0b3251f0eda49a5d4ce2adb5a008a9699287d718ba5c99872d50939bec3568"
+        "ui/index.html": "bbb8913101d8ddcb682a3ff107c9d6199423e60b53a397257a2b0b7f5b69cb10"
       }
     },
     {
@@ -821,15 +822,15 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "5cab91fd6bda86d608760d221e219f7db1508492",
+      "ref": "da40126f4cdbf8b884e05dc2a7b0b28567c1ae75",
       "checksums": {
         "config.json": "e2e6abd5c2849873e8abab48352dd0b39f36aa47dc87813f7796edffbf3f7009",
         "package.json": "d3ad84fce2b585b3d7efd8f5fd6eb397e6eab01ddb522ac36e9e9ad1a1162d0d",
-        "src/handler.ts": "754825d2bac204b1afb353c24200b1bb57d401ae222b042ee76c4eabe2c79f0d",
+        "src/handler.ts": "432d3202c9040ff7222febb87f7b7be61683df7369117503382d63810d3a160c",
         "src/stillness.ts": "e56050aedf6465bdcdfd540caa8718c79556124299e62d39d11bd584c5474c43",
         "tests/phone-loneliness-stillness.test.ts": "4ec2af9c78d0a8693c7383fc5d828191151793a6f66e06207b3569a64c20e24d",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "387b85e9cd8fc1603d7f2486d781a88ba1dfec9940bbabaa174cfff84b18e387",
+        "ui/index.html": "0db54d26cd7475cdce6049167b6b97354a3c3d695413afd072339b2d2154c63f",
         "vitest.config.ts": "32c755ebe06c844913695606feb04f8854016cf1699ae45940c5028dc467ead5"
       }
     },
@@ -848,7 +849,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "10faf82cdb7c49d8c04c37e27ccd4f30220f7898",
+      "ref": "acf4031450ea89c9d97d0a02c9cfe1776c1a4173",
       "checksums": {
         "config.json": "b57804dd67d98c58a2abc7bf279403aae18f3a8a16b584b156f9864de8273e51",
         "package.json": "318857213075fad6aa14a68a1af925c2186c40df245f1e49f9f57295acb60009",
@@ -857,7 +858,7 @@
         "tests/e2e-brain-launches-hangman.test.ts": "67c314d9a6b9d2b8dd43d7ce11137b3202fe0503400d477d9719cc566be29fa2",
         "tests/hangman-handler.test.ts": "d7491b034f14929e6d3feef57a765906e1c50792c133f7ee9220840454cd9f7b",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "63586c0a2287ac0f4db60b36a9a5c6488bff25bdfee72acf094ca4a2e462840f",
+        "ui/index.html": "009d0e3bc92bd261b3e05cef63d01309492a006d0276c54d53c7eee2f1060f61",
         "vitest.config.ts": "32c755ebe06c844913695606feb04f8854016cf1699ae45940c5028dc467ead5"
       }
     },
@@ -877,14 +878,14 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": true,
-      "ref": "10faf82cdb7c49d8c04c37e27ccd4f30220f7898",
+      "ref": "acf4031450ea89c9d97d0a02c9cfe1776c1a4173",
       "checksums": {
         "config.json": "9c6043fb076abfaf4437d1b2d3e71024e9a045a9cd23f0405049f0807b5194de",
         "package.json": "b6ae8489bb3895023ebaaeb5938ec24442692f4cbad4b6b84341a775a035f7f2",
         "src/handler.ts": "9b9e4f9830c29bc970e04ba456384c4937d63d2597321397178a86c77b773fd6",
         "tests/tictactoe-handler.test.ts": "5881b1a894f1822e8fadeb078c99a43c4830a51cadb9b9e3522fbae65d591418",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "c7a70d5200c05b2f5d1330048ad9c715e6f28b7c02b5a79e9ea33ca05c5337bc",
+        "ui/index.html": "3eda5ce3363c4d4fd9c0493b5a24b2b2f2d26b0eea9d107c392c2fc5ff636316",
         "vitest.config.ts": "32c755ebe06c844913695606feb04f8854016cf1699ae45940c5028dc467ead5"
       }
     }
