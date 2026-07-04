@@ -81,7 +81,7 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "fe69458d0ec8d59e8c7f66b5521906864d7f6c7f",
+      "ref": "4f2f426bfd1c49fef2a293b94a177245b91a86ef",
       "checksums": {
         ".gitignore": "5a0f5b76828c9cb4aad3c8be8d2d5d6276d0a2e549b1d9e67c7278700b65f061",
         "README.md": "e458233395e2d42752dc5eb78e2a61205d7ac3e1ae258c098755938b1742dbf7",
@@ -113,7 +113,7 @@
         "server/tests/test_local_capture.py": "f3149d798e2f9ebb95d31360bf26eb570372dbff1e737c76d9b1ef8e40834ba0",
         "src/handler.ts": "e8246366eb9f05afafe3eaa37b7e5087080319643586e2154b21ae787971134a",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
-        "ui/index.html": "a16548bef4891e7620514c8145d4587b20b6e666170414cbe7054cda15c03ae6"
+        "ui/index.html": "1f9d2dd0b35cec88e280c78601b655455f031a81c4e7a75c13e4e048db3150b4"
       }
     },
     {
@@ -132,7 +132,7 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "fe69458d0ec8d59e8c7f66b5521906864d7f6c7f",
+      "ref": "4f2f426bfd1c49fef2a293b94a177245b91a86ef",
       "checksums": {
         ".gitignore": "effecf2ddabc0fb37924f21e486add8e703b4cbedc2550ace17daa5850d45398",
         "README.md": "35b6dd80cb23ecbdc16d552c6d603ad7e934e1fa067959273beb9c484ec677d6",
@@ -166,7 +166,7 @@
         "tests/fixtures.json": "da2d593f19b1c7f6978b3cfa2903337051827ad0101c6b68fa53ac19361570dc",
         "tests/run_tests.py": "370fdfe5bb40800f9c2b4d3eca0575791ae9f2604f205e723c8fa0625426cab3",
         "tsconfig.json": "4ff3c3ff7b881a8901ce304478be85ee8d38d5b680d50cd740d3b794da7d8383",
-        "ui/index.html": "efc302df1ce7a3254b08fec80e72cd4b01907f9267b1dfb565a0e5ec3d54b959"
+        "ui/index.html": "a5a5234f86e42e66e8b0033c78671c9a77d7731f211305d2d51569cd7c2f848e"
       }
     },
     {
@@ -185,7 +185,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "fe69458d0ec8d59e8c7f66b5521906864d7f6c7f",
+      "ref": "4f2f426bfd1c49fef2a293b94a177245b91a86ef",
       "checksums": {
         ".gitignore": "dcaa9c6d97ad85714fd7ce29b8a75ee8d898f6b01e29522ace5ddd0e051ada30",
         "README.md": "8c2457853bf60b677e9e1c3a7b4d105284bde0f0b4dd86b8d3b00fc8b132d805",
@@ -297,7 +297,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "fe69458d0ec8d59e8c7f66b5521906864d7f6c7f",
+      "ref": "4f2f426bfd1c49fef2a293b94a177245b91a86ef",
       "checksums": {
         "README.md": "129dd8b0ea62f63b362c7338d44dd089f75ab28cf97205033771085dd9ec8b67",
         "config.json": "982cbba45a02eae8d0f2ee5257a941524958eb51da10871210d4014bcb1800dd",
@@ -890,6 +890,32 @@
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
         "ui/index.html": "3eda5ce3363c4d4fd9c0493b5a24b2b2f2d26b0eea9d107c392c2fc5ff636316",
         "vitest.config.ts": "32c755ebe06c844913695606feb04f8854016cf1699ae45940c5028dc467ead5"
+      }
+    },
+    {
+      "name": "media-source",
+      "package_name": "@brain/node-media-source",
+      "repo": "brAIn-perception",
+      "subpath": "nodes/media-source",
+      "version": "0.1.0",
+      "tags": [
+        "service",
+        "media",
+        "replay",
+        "perception"
+      ],
+      "description": "Virtual camera + microphone. Plays a video file into voice + gaze in sync, as if it were live input — one UI, one Play button, also drivable over the bus (media.play/media.stop).",
+      "has_ui": true,
+      "needs_python": false,
+      "needs_ollama": false,
+      "ref": "4f2f426bfd1c49fef2a293b94a177245b91a86ef",
+      "checksums": {
+        "README.md": "5b22d977cc2eae88d06bd60fb4d123121233c413d3070e5dfe7f5cdb620a5c83",
+        "config.json": "667fd7bc7788fd6dc6f28a4c038ed0cd20ec314dcd707ecb5a367c5151b19534",
+        "package.json": "7371671ce062a8497575291e33f58bde1e4c4cc3611cca9312bb3f60bd52925d",
+        "src/handler.ts": "c9b9983cde026548c469b014d3fb81fdbf8d84db98991ab530fa277e561f514c",
+        "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
+        "ui/index.html": "569d136f2710b676172a91551f713d56df54f77f6f94e3205c7c80e70c9a4051"
       }
     }
   ],
