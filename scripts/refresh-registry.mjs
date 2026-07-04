@@ -47,7 +47,11 @@ function updateRegistry() {
   const repoToHead = {};
   for (const [name, meta] of Object.entries(reg.repos)) {
     const target = path.join(tmp, name);
-    sh(`git clone --depth 1 --branch ${meta.default_branch ?? "main"} ${meta.clone} ${target}`);
+    // -c core.autocrlf=false -c core.eol=lf: checksums MUST be computed over
+    // LF bytes. A Windows machine with global autocrlf=true would otherwise
+    // hash CRLF-rewritten files and poison the registry for every platform
+    // that clones with LF (the framework install path always does).
+    sh(`git -c core.autocrlf=false -c core.eol=lf clone --depth 1 --branch ${meta.default_branch ?? "main"} ${meta.clone} ${target}`);
     repoToHead[name] = sh("git rev-parse HEAD", { cwd: target });
     console.error(`[${name}] HEAD = ${repoToHead[name]}`);
   }
