@@ -81,7 +81,7 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "6671bf1dc26cfeee2b5e0fab6a44323d1cd2ed68",
+      "ref": "6883278259767716e0daf335ed4a594532ff3686",
       "checksums": {
         ".gitignore": "5a0f5b76828c9cb4aad3c8be8d2d5d6276d0a2e549b1d9e67c7278700b65f061",
         "README.md": "5c50c8b489fcf589112e5a9089374da88b34fb9faf9aaedf05bbce3f3b2f96e6",
@@ -132,7 +132,7 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "6671bf1dc26cfeee2b5e0fab6a44323d1cd2ed68",
+      "ref": "6883278259767716e0daf335ed4a594532ff3686",
       "checksums": {
         ".gitignore": "effecf2ddabc0fb37924f21e486add8e703b4cbedc2550ace17daa5850d45398",
         "README.md": "3585effeb91f0ac7860c52f8ab27c827f16c95f2088a82b223f6a51885cf414b",
@@ -185,7 +185,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "6671bf1dc26cfeee2b5e0fab6a44323d1cd2ed68",
+      "ref": "6883278259767716e0daf335ed4a594532ff3686",
       "checksums": {
         ".gitignore": "dcaa9c6d97ad85714fd7ce29b8a75ee8d898f6b01e29522ace5ddd0e051ada30",
         "README.md": "70c2a4d80e7f8360e3d1edca65dbccba43ead879a8610411bcbeb186cbb247e5",
@@ -297,7 +297,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "6671bf1dc26cfeee2b5e0fab6a44323d1cd2ed68",
+      "ref": "6883278259767716e0daf335ed4a594532ff3686",
       "checksums": {
         "config.json": "982cbba45a02eae8d0f2ee5257a941524958eb51da10871210d4014bcb1800dd",
         "package.json": "5c0b1637b8b2e15f302a9c52369ef08aaa632b37edac5875c8589af6fe5974a4",
