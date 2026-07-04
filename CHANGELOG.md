@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/tibzejoker/brAIn-store/compare/v1.0.0...v1.1.0) (2026-07-04)
+
+
+### Features
+
+* **registry:** media-source node (virtual camera + mic) ([bbc66f8](https://github.com/tibzejoker/brAIn-store/commit/bbc66f886ee67a21e3cb92a8d12fcd8160950f27))
+
+
+### Bug Fixes
+
+* **registry:** compute checksums over LF bytes regardless of host autocrlf ([fe597c9](https://github.com/tibzejoker/brAIn-store/commit/fe597c934b268efe4b7e286a35eac7941f0ffef3))
+
 ## 1.0.0 (2026-05-29)
 
 
