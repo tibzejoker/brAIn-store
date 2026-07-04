@@ -81,7 +81,7 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "d85b900e131b199d54ca89b29b4c7a5348ff2c60",
+      "ref": "b9c6068531ac87d6ff4ad3edb79f23abe39ed2ed",
       "checksums": {
         ".gitignore": "5a0f5b76828c9cb4aad3c8be8d2d5d6276d0a2e549b1d9e67c7278700b65f061",
         "README.md": "e458233395e2d42752dc5eb78e2a61205d7ac3e1ae258c098755938b1742dbf7",
@@ -132,7 +132,7 @@
       "has_ui": true,
       "needs_python": true,
       "needs_ollama": false,
-      "ref": "d85b900e131b199d54ca89b29b4c7a5348ff2c60",
+      "ref": "b9c6068531ac87d6ff4ad3edb79f23abe39ed2ed",
       "checksums": {
         ".gitignore": "effecf2ddabc0fb37924f21e486add8e703b4cbedc2550ace17daa5850d45398",
         "README.md": "35b6dd80cb23ecbdc16d552c6d603ad7e934e1fa067959273beb9c484ec677d6",
@@ -185,7 +185,7 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "d85b900e131b199d54ca89b29b4c7a5348ff2c60",
+      "ref": "b9c6068531ac87d6ff4ad3edb79f23abe39ed2ed",
       "checksums": {
         ".gitignore": "dcaa9c6d97ad85714fd7ce29b8a75ee8d898f6b01e29522ace5ddd0e051ada30",
         "README.md": "8c2457853bf60b677e9e1c3a7b4d105284bde0f0b4dd86b8d3b00fc8b132d805",
@@ -297,12 +297,12 @@
       "has_ui": true,
       "needs_python": false,
       "needs_ollama": false,
-      "ref": "d85b900e131b199d54ca89b29b4c7a5348ff2c60",
+      "ref": "b9c6068531ac87d6ff4ad3edb79f23abe39ed2ed",
       "checksums": {
-        "README.md": "9685a81d861c253629815c730b7e948b954d2bc4dfea07ea5f893d547f359d06",
+        "README.md": "129dd8b0ea62f63b362c7338d44dd089f75ab28cf97205033771085dd9ec8b67",
         "config.json": "982cbba45a02eae8d0f2ee5257a941524958eb51da10871210d4014bcb1800dd",
         "package.json": "5c0b1637b8b2e15f302a9c52369ef08aaa632b37edac5875c8589af6fe5974a4",
-        "src/handler.ts": "882f00ea996d88f784e140a6348208332ce0b89d4f9f6244ab69452724ba97d7",
+        "src/handler.ts": "48abb6a05a41184d978823c7ba1c8a5d93187ca624d68639cde49c067887ae71",
         "src/kokoro.ts": "b8d0f8280520a0fb8ff064bf63e7cf9eaa8a5a318b220cf7f27344391e181389",
         "tests/tts-handler.test.ts": "df5c433afe1877be32421bc60e3cef96fa8a5d52f093a6cda67835c847ab681f",
         "tsconfig.json": "ab7f926be3e290fe799165f4ab31dee509994422044eeee746e4db9589b411d9",
